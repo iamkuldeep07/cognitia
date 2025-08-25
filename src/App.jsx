@@ -1,34 +1,17 @@
-// src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
-
-import Hero from "./pages/Hero";
-import Timeline from "./pages/Timeline";
-import PopularEvents from "./pages/PopularEvents";
-import Footer from "./pages/Footer";
-import Navbar from "./components/Navbar";
+import Layout from "./Layout";
 import CanvasCursor from "./components/CanvasCursor";
-
+import Hero from "./pages/Hero";
+import PopularEvent from "./pages/PopularEvents"
 import Event from "./pages/Event";
 import Team from "./pages/Team";
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
-
-// ✅ Layout wrapper
-const Layout = ({ children }) => (
-  <>
-    <Navbar />
-    <main>{children}</main>
-    <Footer />
-  </>
-);
+import Timeline from "./pages/Timeline";
 
 const App = () => {
   return (
     <Router>
-      <CanvasCursor /> {/* Cursor stays on top of everything */}
+      <CanvasCursor />
       <Routes>
         <Route
           path="/"
@@ -36,7 +19,7 @@ const App = () => {
             <Layout>
               <Hero />
               <Timeline />
-              <PopularEvents />
+              <PopularEvent />
             </Layout>
           }
         />

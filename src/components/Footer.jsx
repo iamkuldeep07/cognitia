@@ -8,19 +8,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const footerRef = useRef(null);
-  const cognitiaRef = useRef(null); // New ref for the COGNITIA text
+  const cognitiaRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Scroll-triggered entrance animation
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-      });
+      // Entrance animation: either on scroll or immediately if in viewport
+      const tl = gsap.timeline();
 
+      // Animate footer
       tl.from(footerRef.current, {
         y: 100,
         opacity: 0,
@@ -37,9 +32,17 @@ const Footer = () => {
         "-=0.5"
       );
 
-      // Breathing glow animation (infinite)
+      // ScrollTrigger (optional if you want scroll-based animation)
+      ScrollTrigger.create({
+        trigger: footerRef.current,
+        start: "top 85%",
+        animation: tl,
+      });
+
+      // Infinite glow animation
       gsap.to(cognitiaRef.current, {
-        textShadow: "0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ff88",
+        textShadow:
+          "0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ff88",
         duration: 2,
         repeat: -1,
         yoyo: true,
