@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-
+import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { eventsData } from "../../constants";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,111 +14,26 @@ import {
   Gamepad2,
   Wrench,
   Rocket,
-  ChevronDown,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// === Event Data ===
-const eventsData = {
-  Coding: [
-    {
-      title: "Code Conquest",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?code,computer",
-      desc: "Competitive coding challenge.",
-    },
-    {
-      title: "Capture the Flag",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?hacker,cyber",
-      desc: "Unleash your inner hacker!",
-    },
-    {
-      title: "Hackathon",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?hackathon,team",
-      desc: "Build innovative solutions in 24hrs.",
-    },
-  ],
-  Robotics: [
-    {
-      title: "Robo Race",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?robot,competition",
-      desc: "Fastest robot wins the race!",
-    },
-    {
-      title: "Line Follower",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?robotics,ai",
-      desc: "Robots that follow the line track.",
-    },
-  ],
-  Dept: [
-    {
-      title: "Paper Presentation",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?presentation,seminar",
-      desc: "Showcase your research ideas.",
-    },
-    {
-      title: "Project Expo",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?project,expo",
-      desc: "Innovative projects on display.",
-    },
-  ],
-  Astro: [
-    {
-      title: "Stargazing Night",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?astronomy,stars",
-      desc: "Enjoy the stars with telescopes.",
-    },
-    {
-      title: "Astro Quiz",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?space,quiz",
-      desc: "Quiz competition about astronomy.",
-    },
-  ],
-  Other: [
-    {
-      title: "Gaming Tournament",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?gaming,tournament",
-      desc: "Battle it out in esports tournaments.",
-    },
-    {
-      title: "Treasure Hunt",
-      time: "To be announced",
-      img: "https://source.unsplash.com/600x400/?treasure,hunt",
-      desc: "Solve clues to find hidden treasures.",
-    },
-  ],
-};
-
-// === Categories for Infinite Scroll ===
 const eventCategories = [
-  { title: "CODING", icon: <Code className="w-6 h-6 text-cyan-400" /> },
-  { title: "ROBOTIC", icon: <Cpu className="w-6 h-6 text-green-400" /> },
-  {
-    title: "ASTRONOMY",
-    icon: <Telescope className="w-6 h-6 text-purple-400" />,
-  },
-  { title: "DEPARTMENTAL", icon: <Layers className="w-6 h-6 text-pink-400" /> },
-  { title: "GAMING", icon: <Gamepad2 className="w-6 h-6 text-yellow-400" /> },
-  { title: "WORKSHOPS", icon: <Wrench className="w-6 h-6 text-orange-400" /> },
-  { title: "HACKATHONS", icon: <Rocket className="w-6 h-6 text-red-400" /> },
+  { title: "Coding", icon: <Code className="w-6 h-6 text-cyan-400" /> },
+  { title: "Robotics", icon: <Cpu className="w-6 h-6 text-green-400" /> },
+  { title: "Astro", icon: <Telescope className="w-6 h-6 text-purple-400" /> },
+  { title: "Dept", icon: <Layers className="w-6 h-6 text-pink-400" /> },
+  { title: "Other", icon: <Gamepad2 className="w-6 h-6 text-yellow-400" /> },
+  { title: "Workshops", icon: <Wrench className="w-6 h-6 text-orange-400" /> },
+  { title: "Hackathons", icon: <Rocket className="w-6 h-6 text-red-400" /> },
 ];
 
 const Event = () => {
   const [activeTab, setActiveTab] = useState("Coding");
   const containerRef = useRef(null);
   const scrollerRef = useRef(null);
+  const navigate = useNavigate();
 
-  // GSAP stagger animation when switching tabs
   useEffect(() => {
     if (containerRef.current) {
       gsap.fromTo(
@@ -128,7 +44,6 @@ const Event = () => {
     }
   }, [activeTab]);
 
-  // GSAP infinite scroll for categories
   useEffect(() => {
     const el = scrollerRef.current;
     const tl = gsap.to(el, {
@@ -158,10 +73,8 @@ const Event = () => {
 
   return (
     <>
-
-
-      {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden text-white">
+        {/* Background */}
         <ShaderGradientCanvas
           style={{
             position: "absolute",
@@ -210,26 +123,24 @@ const Event = () => {
           />
         </ShaderGradientCanvas>
 
+        {/* Headline */}
         <div className="relative z-10 text-center px-6">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl md:text-6xl font-bold"
+            className="text-6xl md:text-7xl font-extrabold tracking-tight"
           >
-            Explore your <span className="text-cyan-400">Cognitia</span> Events
+            Discover <span className="text-cyan-400">Cognitia</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="mt-4 text-lg md:text-xl text-white/80 max-w-2xl mx-auto"
+            className="mt-6 text-2xl md:text-3xl text-white/80 font-light max-w-3xl mx-auto"
           >
-            Browse all the upcoming events of Cognitia 2K25 compiled for you.
+            Where ideas ignite, and brilliance takes the stage.
           </motion.p>
-          <button className="mt-6 bg-cyan-400 text-black font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-cyan-500 transition-transform transform hover:scale-105">
-            Register Now!
-          </button>
         </div>
 
         {/* Infinite Scroller */}
@@ -255,10 +166,19 @@ const Event = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 z-10 flex flex-col items-center">
-          <p className="text-white/70 text-sm mb-2">Scroll Down</p>
-          <ChevronDown className="text-cyan-400 w-8 h-8" />
-        </div>
+        {/* Bold Closing Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          viewport={{ once: true }}
+          className="relative z-10 mt-24 text-center px-6"
+        >
+          <p className="text-4xl md:text-5xl font-semibold text-white/90 leading-snug">
+            One fest.{" "}
+            <span className="text-cyan-400">Endless experiences.</span>
+          </p>
+        </motion.div>
       </section>
 
       {/* Events Section */}
@@ -278,7 +198,7 @@ const Event = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`pb-2 text-lg font-semibold transition-all ${
+              className={`pb-2 text-lg font-semibold ${
                 activeTab === tab
                   ? "border-b-2 border-green-400 text-green-400"
                   : "text-gray-400 hover:text-green-300"
@@ -289,7 +209,7 @@ const Event = () => {
           ))}
         </div>
 
-        {/* Grid of Cards */}
+        {/* Event Cards */}
         <div
           ref={containerRef}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
@@ -300,6 +220,7 @@ const Event = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-gray-800 hover:border-green-400"
+              onClick={() => navigate(`/events/${event.slug}`)}
             >
               <img
                 src={event.img}
@@ -308,20 +229,15 @@ const Event = () => {
               />
               <div className="p-5">
                 <div className="flex items-center text-sm text-gray-400 mb-2">
-                  <FaClock className="mr-2 text-green-400" />
-                  {event.time}
+                  <FaClock className="mr-2 text-green-400" /> {event.time}
                 </div>
                 <h3 className="text-xl font-bold">{event.title}</h3>
                 <p className="text-gray-400 mt-1">{event.desc}</p>
-                <button className="mt-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
-                  Register Now
-                </button>
               </div>
             </motion.div>
           ))}
         </div>
       </section>
-
     </>
   );
 };

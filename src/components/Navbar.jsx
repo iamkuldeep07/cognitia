@@ -31,7 +31,7 @@ const Navbar = () => {
             src="/cognitia_logoc.jpg"
             alt="logo"
             className="rounded-full shadow-md"
-            style={{ width: "60px", height: "60px", objectFit: "cover" }}
+            style={{ width: "40px", height: "40px", objectFit: "cover" }}
           />
           <p className="font-modern-negra text-3xl -mb-2">Cognitia</p>
         </Link>

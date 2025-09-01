@@ -6,6 +6,7 @@ import { ShaderGradientCanvas, ShaderGradient } from "@shadergradient/react";
 import DecoderMotion from "../components/DecoderMotion";
 import { ChevronDown } from "lucide-react"; // Icon for scroll down
 
+
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const Hero = () => {

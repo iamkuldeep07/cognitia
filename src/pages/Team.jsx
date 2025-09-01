@@ -586,7 +586,7 @@ const Team = () => {
   const [activeTab, setActiveTab] = useState("Core");
 
   return (
-    <section className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16">
+    <section className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden px-6 py-16 pt-25">
       {/* Shader Background */}
       <ShaderGradientCanvas
         style={{
