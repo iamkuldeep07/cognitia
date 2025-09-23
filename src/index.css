@@ -114,3 +114,23 @@ nav ul {
   @apply text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed;
   font-family: "PPEiko", serif;
 }
+
+/* Add this to your global stylesheet (e.g., globals.css) */
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #020617, #0f172a, #1e3a8a, #0c4a6e);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

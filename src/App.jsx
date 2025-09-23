@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Timeline from "./pages/Timeline";
 import PopularEvent from "./pages/PopularEvents";
 import ScrollToTop from "./components/ScrollToTop";
-import EventDetails from "./pages/EventDetails"; // 👈 Import
+import EventDetails from "./pages/EventDetails"; 
 
 const App = () => {
   return (
