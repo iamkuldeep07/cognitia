@@ -25,7 +25,8 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
-      <div className="flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto">
+      <div className="flex items-center justify-between py-5 px-5 lg:px-0 max-w-7xl mx-auto">
+        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img
             src="/cognitia_logoc.jpg"
@@ -36,32 +37,34 @@ const Navbar = () => {
           <p className="font-modern-negra text-3xl -mb-2">Cognitia</p>
         </Link>
 
-        <ul className="flex-center lg:gap-12 gap-7">
+        {/* Nav Links */}
+        <ul className="hidden md:flex items-center gap-12">
           {navLinks.map((link) => (
             <li key={link.id}>
               {link.id === "home" ? (
-                <Link to="/" className="cursor-pointer md:text-base text-sm">
+                <Link to="/" className="cursor-pointer text-base">
                   {link.title}
                 </Link>
               ) : link.id === "events" ? (
-                <Link to="/events" className="cursor-pointer md:text-base text-sm">
+                <Link to="/events" className="cursor-pointer text-base">
                   {link.title}
                 </Link>
               ) : link.id === "team" ? (
-                <Link to="/team" className="cursor-pointer md:text-base text-sm">
+                <Link to="/team" className="cursor-pointer text-base">
                   {link.title}
                 </Link>
               ) : (
-                <a
-                  href={`#${link.id}`}
-                  className="cursor-pointer md:text-base text-sm"
-                >
+                <a href={`#${link.id}`} className="cursor-pointer text-base">
                   {link.title}
                 </a>
               )}
             </li>
           ))}
         </ul>
+
+        <div className="md:hidden">
+          <button className="text-white text-2xl">&#9776;</button>
+        </div>
       </div>
     </nav>
   );

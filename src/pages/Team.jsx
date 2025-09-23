@@ -29,7 +29,6 @@ const Team = () => {
           edgeFade={0.25}
           transparent
         />
-        {/* Optional dark overlay for readability */}
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       </div>
 
@@ -78,11 +77,10 @@ const Team = () => {
               className="group relative bg-green-800/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-green-500"
               style={{ borderColor: member.borderColor }}
             >
-              {/* Lazy loaded image with zoom effect */}
+              {/* Image without lazy loading */}
               <img
                 src={member.image}
                 alt={member.title}
-                loading="lazy"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
 
