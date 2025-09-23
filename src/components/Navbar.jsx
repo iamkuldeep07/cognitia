@@ -1,40 +1,36 @@
-import { navLinks } from "../../constants";
+import { navLinks } from "../../constants"; // Make sure you have this file with your links
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger
 import { Link } from "react-router-dom";
 
+// Register the ScrollTrigger plugin with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
 const Navbar = () => {
-  // Your GSAP animation for the background color is correct and doesn't need changes.
   useGSAP(() => {
-    // This requires ScrollTrigger plugin to be registered, e.g., gsap.registerPlugin(ScrollTrigger)
-    const navTween = gsap.timeline({
+    // Animate the navbar background on scroll
+    gsap.to("nav", {
+      backgroundColor: "rgba(0,0,0,0.5)",
+      backdropFilter: "blur(10px)",
+      duration: 0.5,
+      ease: "power1.inOut",
       scrollTrigger: {
-        trigger: "nav",
-        start: "bottom top",
-        toggleActions: "play none none reverse", // Makes the effect reversible on scroll up
+        trigger: "body", // Use a reliable trigger like the body
+        start: "top -10%", // Start the animation when scrolled 10% down
+        toggleActions: "play none none reverse", // Play on scroll down, reverse on scroll up
       },
     });
-
-    navTween.fromTo(
-      "nav",
-      { backgroundColor: "transparent" },
-      {
-        backgroundColor: "rgba(0,0,0,0.5)",
-        backdropFilter: "blur(10px)", // Optional: adds a nice blur effect
-        duration: 0.5,
-        ease: "power1.inOut",
-      }
-    );
-  });
+  }, []); // Empty dependency array ensures this runs once
 
   return (
-    // This is the full-width bar for background and positioning
-    <nav className="fixed top-0 left-0 w-full z-50">
-      {/* FIX: This outer div is now the centered container. 
-          It sets the max-width and centers the content. */}
+    // The main <nav> element gets its base styles from the CSS file
+    <nav>
+      {/* 1. The Container: Sets the max-width and centers the content. */}
       <div className="container mx-auto px-5">
-        {/* FIX: This inner div now ONLY handles the flexbox layout. */}
-        <div className="flex justify-between items-center gap-5 py-5">
+        {/* 2. The Flex Wrapper: Arranges the logo and links. */}
+        <div className="flex justify-between items-center py-5">
+          {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2">
             <img
               src="/cognitia_logoc.jpg"
@@ -42,31 +38,23 @@ const Navbar = () => {
               className="rounded-full shadow-md"
               style={{ width: "40px", height: "40px", objectFit: "cover" }}
             />
-            <p className="font-modern-negra text-3xl -mb-2">Cognitia</p>
+            {/* The <p> tag gets its styles from `nav p` in the CSS */}
+            <p>Cognitia</p>
           </Link>
 
-          <ul className="flex-center lg:gap-12 gap-7">
+          {/* Navigation Links Section */}
+          {/* The <ul> and <a> tags get their styles from the CSS */}
+          <ul>
             {navLinks.map((link) => (
               <li key={link.id}>
                 {link.id === "home" ? (
-                  <Link to="/" className="cursor-pointer md:text-base text-sm">
-                    {link.title}
-                  </Link>
+                  <Link to="/">{link.title}</Link>
                 ) : link.id === "events" ? (
-                  <Link to="/events" className="cursor-pointer md:text-base text-sm">
-                    {link.title}
-                  </Link>
+                  <Link to="/events">{link.title}</Link>
                 ) : link.id === "team" ? (
-                  <Link to="/team" className="cursor-pointer md:text-base text-sm">
-                    {link.title}
-                  </Link>
+                  <Link to="/team">{link.title}</Link>
                 ) : (
-                  <a
-                    href={`#${link.id}`}
-                    className="cursor-pointer md:text-base text-sm"
-                  >
-                    {link.title}
-                  </a>
+                  <a href={`#${link.id}`}>{link.title}</a>
                 )}
               </li>
             ))}

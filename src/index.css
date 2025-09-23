@@ -55,14 +55,14 @@ body {
 }
 
 /* ---------------------- Navbar ---------------------- */
+/* This rule styles the main navbar bar */
 nav {
   @apply fixed top-0 left-0 w-full z-50 transition-colors duration-500;
 }
 
-nav div {
-  @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
-}
+/* The broad `nav div` rule has been REMOVED to prevent layout conflicts */
 
+/* These rules style the text and links within the navbar */
 nav p {
   @apply font-modern-negra text-3xl -mb-2;
 }
@@ -94,7 +94,6 @@ nav ul {
   @apply bg-cyan-400 text-black font-semibold py-4 px-8 rounded-lg shadow-lg hover:bg-cyan-500 transition-transform transform hover:scale-105;
 }
 
-/* Scroll Down Icon */
 .scroll-down {
   @apply absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-white text-3xl;
 }
@@ -114,8 +113,6 @@ nav ul {
   @apply text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed;
   font-family: "PPEiko", serif;
 }
-
-/* Add this to your global stylesheet (e.g., globals.css) */
 
 .animated-gradient {
   background: linear-gradient(-45deg, #020617, #0f172a, #1e3a8a, #0c4a6e);
