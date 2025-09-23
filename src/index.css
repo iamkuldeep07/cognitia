@@ -31,14 +31,16 @@
 }
 
 /* ---------------------- Global Styles ---------------------- */
-html,
+/* FIX: Corrected styles to prevent double scrollbars */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  width: 100%;
   min-height: 100vh;
   background-color: black;
   color: white;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevents accidental horizontal scrolling */
   font-family: var(--font-sans);
 }
 
@@ -55,14 +57,13 @@ body {
 }
 
 /* ---------------------- Navbar ---------------------- */
-/* This rule styles the main navbar bar */
 nav {
   @apply fixed top-0 left-0 w-full z-50 transition-colors duration-500;
 }
 
-/* The broad `nav div` rule has been REMOVED to prevent layout conflicts */
+/* NOTE: The problematic `nav div` rule has been removed. */
+/* Layout styles are now handled directly in the Navbar.jsx component. */
 
-/* These rules style the text and links within the navbar */
 nav p {
   @apply font-modern-negra text-3xl -mb-2;
 }

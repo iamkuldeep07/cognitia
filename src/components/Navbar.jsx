@@ -1,7 +1,7 @@
-import { navLinks } from "../../constants"; // Make sure you have this file with your links
+import { navLinks } from "../../constants"; // Ensure this file exists and exports your links
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 
 // Register the ScrollTrigger plugin with GSAP
@@ -11,24 +11,24 @@ const Navbar = () => {
   useGSAP(() => {
     // Animate the navbar background on scroll
     gsap.to("nav", {
-      backgroundColor: "rgba(0,0,0,0.5)",
+      backgroundColor: "rgba(0,0,0,0.7)",
       backdropFilter: "blur(10px)",
       duration: 0.5,
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: "body", // Use a reliable trigger like the body
-        start: "top -10%", // Start the animation when scrolled 10% down
-        toggleActions: "play none none reverse", // Play on scroll down, reverse on scroll up
+        trigger: "body",
+        start: "top -10%", // Start animation after scrolling 10% of the viewport height
+        toggleActions: "play none none reverse",
       },
     });
-  }, []); // Empty dependency array ensures this runs once
+  }, []); // Empty dependency array ensures this runs only once
 
   return (
     // The main <nav> element gets its base styles from the CSS file
     <nav>
-      {/* 1. The Container: Sets the max-width and centers the content. */}
+      {/* 1. The Container: Sets a max-width and centers the content horizontally */}
       <div className="container mx-auto px-5">
-        {/* 2. The Flex Wrapper: Arranges the logo and links. */}
+        {/* 2. The Flex Wrapper: Arranges the logo and links using flexbox */}
         <div className="flex justify-between items-center py-5">
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2">
