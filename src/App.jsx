@@ -8,38 +8,48 @@ import Footer from "./components/Footer";
 import Timeline from "./pages/Timeline";
 import PopularEvent from "./pages/PopularEvents";
 import ScrollToTop from "./components/ScrollToTop";
-import EventDetails from "./pages/EventDetails"; 
+import EventDetails from "./pages/EventDetails";
 
 const App = () => {
   return (
     <Router>
       <CanvasCursor />
       <ScrollToTop />
-      <Navbar />
-      <div>
-        <Routes>
-          {/* Home Page */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <Timeline />
-                <PopularEvent />
-              </>
-            }
-          />
 
-          {/* Event listing page */}
+      {/* Full Page Layout */}
+      <div className="flex flex-col min-h-screen">
 
-          {/* Team page */}
-          <Route path="/team" element={<Team />} />
+        <Navbar />
 
-          <Route path="/events" element={<Event />} />
-          <Route path="/events/:id" element={<EventDetails />} />
-        </Routes>
+        {/* Main Content */}
+        <main className="flex-grow">
+          <Routes>
+
+            {/* Home */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <Timeline />
+                  <PopularEvent />
+                </>
+              }
+            />
+
+            {/* Team */}
+            <Route path="/team" element={<Team />} />
+
+            {/* Events */}
+            <Route path="/events" element={<Event />} />
+            <Route path="/events/:id" element={<EventDetails />} />
+
+          </Routes>
+        </main>
+
+        <Footer />
+
       </div>
-      <Footer />
     </Router>
   );
 };

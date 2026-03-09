@@ -1,39 +1,20 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import PixelBlast from "../components/PixelBlast";
 import { teamData } from "../../constants";
 
 const Team = () => {
   const [activeTab, setActiveTab] = useState("SAC");
 
   return (
-    <section className="relative min-h-screen w-full text-white flex flex-col items-center justify-center overflow-hidden scroll-smooth px-6 py-16 bg-green-900">
-      {/* Pixel Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <PixelBlast
-          variant="circle"
-          pixelSize={6}
-          color="#B19EEF"
-          patternScale={3}
-          patternDensity={1.2}
-          pixelSizeJitter={0.5}
-          enableRipples
-          rippleSpeed={0.4}
-          rippleThickness={0.12}
-          rippleIntensityScale={1.5}
-          liquid
-          liquidStrength={0.12}
-          liquidRadius={1.2}
-          liquidWobbleSpeed={5}
-          speed={0.6}
-          edgeFade={0.25}
-          transparent
-        />
-        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-      </div>
+    <section className="relative min-h-screen w-full text-white flex flex-col items-center px-6 py-16 pb-20 bg-gradient-to-b from-green-950 via-green-900 to-green-950">
 
-      {/* All content above background */}
+      {/* Decorative Glow */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-green-500/20 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-20 right-20 w-72 h-72 bg-green-400/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+      {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
+
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
@@ -74,17 +55,15 @@ const Team = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="group relative bg-green-800/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-green-500"
+              className="group relative bg-green-800/70 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-green-500"
               style={{ borderColor: member.borderColor }}
             >
-              {/* Image without lazy loading */}
               <img
                 src={member.image}
                 alt={member.title}
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
 
-              {/* Overlay text always visible */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4">
                 <h3 className="text-xl font-bold">{member.title}</h3>
                 <p className="text-sm text-gray-200">{member.subtitle}</p>
@@ -93,6 +72,7 @@ const Team = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

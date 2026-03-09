@@ -1009,7 +1009,7 @@ const teamData = {
       subtitle: "Co-ordinator(Public Relations)",
       handle: "@rohit",
       borderColor: "#F97316",
-    }, // Orange
+    }, 
     {
       image:
         "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSaloni%20Singh.5ab63877.jpg&w=2048&q=75",
