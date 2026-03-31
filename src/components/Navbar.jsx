@@ -1,10 +1,9 @@
-import { navLinks } from "../../constants"; // Ensure this file exists and exports your links
+import { navLinks } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 
-// Register the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
@@ -21,14 +20,11 @@ const Navbar = () => {
         toggleActions: "play none none reverse",
       },
     });
-  }, []); // Empty dependency array ensures this runs only once
+  }, []);
 
   return (
-    // The main <nav> element gets its base styles from the CSS file
     <nav>
-      {/* 1. The Container: Sets a max-width and centers the content horizontally */}
       <div className="container mx-auto px-5">
-        {/* 2. The Flex Wrapper: Arranges the logo and links using flexbox */}
         <div className="flex justify-between items-center py-5">
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2">
@@ -38,26 +34,29 @@ const Navbar = () => {
               className="rounded-full shadow-md"
               style={{ width: "40px", height: "40px", objectFit: "cover" }}
             />
-            {/* The <p> tag gets its styles from `nav p` in the CSS */}
             <p>Cognitia</p>
           </Link>
 
           {/* Navigation Links Section */}
-          {/* The <ul> and <a> tags get their styles from the CSS */}
           <ul>
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                {link.id === "home" ? (
-                  <Link to="/">{link.title}</Link>
-                ) : link.id === "events" ? (
-                  <Link to="/events">{link.title}</Link>
-                ) : link.id === "team" ? (
-                  <Link to="/team">{link.title}</Link>
-                ) : (
-                  <a href={`#${link.id}`}>{link.title}</a>
-                )}
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              // Create an array of IDs that should be full page routes
+              const pageRoutes = ["home", "events", "team", "buy-merch"];
+
+              return (
+                <li key={link.id}>
+                  {pageRoutes.includes(link.id) ? (
+                    // If the ID is in our list, use React Router to navigate
+                    <Link to={link.id === "home" ? "/" : `/${link.id}`}>
+                      {link.title}
+                    </Link>
+                  ) : (
+                    // If it's NOT in the list, treat it as a scroll-to-section link
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

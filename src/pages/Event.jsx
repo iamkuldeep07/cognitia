@@ -39,7 +39,7 @@ const Event = () => {
       gsap.fromTo(
         containerRef.current.children,
         { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power3.out" }
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power3.out" },
       );
     }
   }, [activeTab]);
@@ -73,7 +73,10 @@ const Event = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden text-white">
+      <section
+        className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden text-white"
+        id="events"
+      >
         {/* Background */}
         <ShaderGradientCanvas
           style={{
@@ -182,7 +185,7 @@ const Event = () => {
       </section>
 
       {/* Events Section */}
-      <section className="bg-black text-white py-20 px-8 md:px-16">
+      <section className="bg-black text-white py-20 px-8 md:px-16" id="all-events">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -229,10 +232,13 @@ const Event = () => {
               />
               <div className="p-5">
                 <div className="flex items-center text-sm text-gray-400 mb-2">
-                  <FaClock className="mr-2 text-green-400" /> {event.time}
+                  <FaClock className="mr-2 text-green-400" /> {event.schedule}
                 </div>
                 <h3 className="text-xl font-bold">{event.title}</h3>
-                <p className="text-gray-400 mt-1">{event.desc}</p>
+                <p className="text-gray-400 mt-1">
+                  {event.desc.split(" ").slice(0, 30).join(" ")}
+                  {event.desc.split(" ").length > 50 && "..."}
+                </p>
               </div>
             </motion.div>
           ))}

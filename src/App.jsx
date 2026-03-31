@@ -6,6 +6,7 @@ import Team from "./pages/Team";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Timeline from "./pages/Timeline";
+import Merch from "./pages/Merch";
 import PopularEvent from "./pages/PopularEvents";
 import ScrollToTop from "./components/ScrollToTop";
 import EventDetails from "./pages/EventDetails";
@@ -13,43 +14,33 @@ import EventDetails from "./pages/EventDetails";
 const App = () => {
   return (
     <Router>
-      <CanvasCursor />
+      {/* <CanvasCursor /> */}
       <ScrollToTop />
+      <Navbar />
+      <div>
+        <Routes>
+          {/* Home Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Timeline />
+                <PopularEvent />
+              </>
+            }
+          />
 
-      {/* Full Page Layout */}
-      <div className="flex flex-col min-h-screen">
+          {/* Event listing page */}
+          <Route path="/buy-merch" element={<Merch />} />
+          {/* Team page */}
+          <Route path="/team" element={<Team />} />
 
-        <Navbar />
-
-        {/* Main Content */}
-        <main className="flex-grow">
-          <Routes>
-
-            {/* Home */}
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <Timeline />
-                  <PopularEvent />
-                </>
-              }
-            />
-
-            {/* Team */}
-            <Route path="/team" element={<Team />} />
-
-            {/* Events */}
-            <Route path="/events" element={<Event />} />
-            <Route path="/events/:id" element={<EventDetails />} />
-
-          </Routes>
-        </main>
-
+          <Route path="/events" element={<Event />} />
+          <Route path="/events/:id" element={<EventDetails />} />
+        </Routes>
+        </div>
         <Footer />
-
-      </div>
     </Router>
   );
 };

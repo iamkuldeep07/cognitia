@@ -6,7 +6,6 @@ import { ShaderGradientCanvas, ShaderGradient } from "@shadergradient/react";
 import DecoderMotion from "../components/DecoderMotion";
 import { ChevronDown } from "lucide-react"; // Icon for scroll down
 
-
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const Hero = () => {
@@ -38,13 +37,19 @@ const Hero = () => {
       })
         .from(
           paragraphSplit.words,
-          { opacity: 0, y: 30, stagger: 0.05, duration: 0.8, ease: "power2.out" },
-          "-=0.8"
+          {
+            opacity: 0,
+            y: 30,
+            stagger: 0.05,
+            duration: 0.8,
+            ease: "power2.out",
+          },
+          "-=0.8",
         )
         .from(
           button,
           { opacity: 0, scale: 0.8, duration: 0.7, ease: "back.out(1.7)" },
-          "-=0.5"
+          "-=0.5",
         );
 
       // Scroll Down Icon Animation
@@ -64,6 +69,7 @@ const Hero = () => {
     <section
       ref={sectionRef}
       className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden"
+      style={{ isolation: "isolate" }} 
     >
       {/* Shader Background */}
       <ShaderGradientCanvas
@@ -74,9 +80,9 @@ const Hero = () => {
           width: "100%",
           height: "100%",
           zIndex: 0,
+          pointerEvents: "none",
         }}
         pixelDensity={1}
-        pointerEvents="none"
       >
         <ShaderGradient
           animate="on"
@@ -125,7 +131,7 @@ const Hero = () => {
             className="text-cyan-400 italic"
             style={{ fontFamily: "PPEiko, serif" }}
           >
-            Cognitia 2K25
+            Cognitia 2K26
           </span>
         </h1>
         <p
@@ -139,7 +145,14 @@ const Hero = () => {
           <span className="text-cyan-300 font-semibold">Hackathons</span> like
           never before. Get ready to innovate, compete & create history!
         </p>
-        <button className="bg-cyan-400 text-black font-semibold py-4 px-10 rounded-lg shadow-lg hover:bg-cyan-500 transition-transform transform hover:scale-105">
+        <button
+          onClick={() => {
+            document.getElementById("popular-events").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="bg-cyan-400 text-black font-semibold py-4 px-10 rounded-lg shadow-lg hover:bg-cyan-500 transition-transform transform hover:scale-105"
+        >
           Get Started
         </button>
 

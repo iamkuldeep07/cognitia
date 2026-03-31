@@ -3,300 +3,549 @@ const navLinks = [
   { id: "home", title: "Home" },
   { id: "events", title: "Events" },
   { id: "team", title: "Team" },
+  { id: "buy-merch", title: "Buy Merch" },
 ];
 
 const events = [
-  // Existing Coding Event
+  // Coding Event
   {
-    title: "CodeQuest Hackathon",
-    slug: "codequest-hackathon",
+    title: "Hackathon",
+    slug: "hackathon",
     category: "Coding",
-    img: "https://i.im.ge/2023/10/22/t5Ggk1.charlesdeluvio-Lks7vei-eAg-unsplash-1.jpg?w=2048&q=10",
-    desc: "An overnight hackathon where participants build innovative projects and solve real-world problems using technology.",
-    prize: "₹50,000 + Goodies",
+    img: "/events/coding/hackathon.jpg",
+    desc: "Get ready for an adrenaline-filled coding marathon with our Hackathon, where creativity meets technology! This is your chance to transform innovative ideas into real-world solutions within a limited time frame.Participants will collaborate in teams to brainstorm, design, and develop projects that tackle real-life problems. Whether it’s web development, AI, IoT, or app building — this hackathon is all about pushing boundaries and bringing ideas to life.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Prem Kumar Gupta - b22cs026@nitm.ac.in",
+      "Shashank Umar Vaishy - b23cs019@nitm.ac.in",
+      "Charity Rymbai - b23me010@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/rhgru4aRH8CCC7519",
+    rulebookLink:
+      "https://drive.google.com/file/d/1pN0ynway3Z3e7fRLHoA6CVTN8BPnxxoQ/view?usp=drive_link",
+  },
+  {
+    title: "Coding Contest",
+    slug: "coding-contest",
+    category: "Coding",
+    img: "/events/coding/codeconquest.png",
+    desc: "Step into the battlefield of logic and algorithms with Code Conquest, the ultimate coding challenge designed to test your problem-solving skills, speed, and precision. Whether you’re a beginner or a seasoned programmer, this event pushes you to think critically and code efficiently under pressure.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Mrinmoy Maji - b22cs036@nitm.ac.in",
+      "Ankit Raj - b23ec012@nitm.ac.in",
+      "Abhay Kumar - b23ec022@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/Mcjd2Mpw6KTSDeKi9",
+    rulebookLink:
+      "https://drive.google.com/file/d/1m6zcpyZD0qpcx4FU2cGzIF53ky2mGsk0/view?usp=drive_link",
+  },
+  {
+    title: "Capture The Flag",
+    slug: "capture-the-flag",
+    category: "Coding",
+    img: "/events/coding/capturetheflag.jpg",
+    desc: "Step into the world of cybersecurity with Capture The Flag (CTF) — an intense, challenge-based competition where participants solve security puzzles, uncover hidden vulnerabilities, and capture digital “flags” to score points.From cryptography and web exploitation to reverse engineering and forensics, this event is designed to test your hacking mindset, analytical thinking, and technical skills in a fun and competitive environment.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Manish Prasad Gupta - b22cs007@nitm.ac.in",
+      "Austin Joel Dympep - b23cs035@nitm.ac.in",
+      "Arunoday Tiwari - b23ec009@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/pToTjhjDgCyP3fHf9",
+    rulebookLink:
+      "https://drive.google.com/file/d/13lWHAieu5P3LlopPQeKtAtAdgwEEuJkm/view?usp=drive_link",
+  },
+  {
+    title: "Blind Folded Coding",
+    slug: "blind-folded-coding",
+    category: "Coding",
+    img: "/events/coding/blindfoldedcoding.webp",
+    desc: "Think you truly know coding? Put your skills to the ultimate test in Blindfolded Coding — a thrilling challenge where participants must write code without seeing their screens!.This event pushes your logical thinking, syntax mastery, and memory to the limit. With vision taken away, only your understanding of programming concepts and keyboard familiarity will guide you to victory.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Mrinmoy Maji - b22cs036@nitm.ac.in",
+      "Ankit Raj - b23ec012@nitm.ac.in",
+      "Abhay Kumar - b23ec022@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/Vub72ZYazdhDb6ao7",
+    rulebookLink:
+      "https://drive.google.com/file/d/1golCFEnH6a12TGjKlS5cD6CTsYw-Y53d/view?usp=drive_link",
+  },
+  {
+    title: "Relay Typing Competition",
+    slug: "relay-typing-competition",
+    category: "Coding",
+    img: "/events/coding/relaytyping.webp",
+    desc: "Speed meets teamwork in the Relay Typing Competition! Participants compete in teams where each member contributes sequentially to complete a given typing or coding task. Accuracy, coordination, and speed are the keys to victory in this fun yet competitive event.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Prem Kumar Gupta - Convenor",
+      "Aryan Raj - Coordinator",
+      "Khushi Kumari - Coordinator",
+    ],
+    registerLink: "https://forms.gle/rpzRCiwccHiBNuSo7",
+    rulebookLink:
+      "https://drive.google.com/file/d/1ByM22JZVa3gbX8eGVMjNlx6VNRWQ0p1g/view?usp=drive_link",
+  },
+
+  {
+    title: "Tech Dumb Charades",
+    slug: "tech-dumb-charades",
+    category: "Coding",
+    img: "/events/coding/techcharades.jpg",
+    desc: "A fun twist on the classic game! Tech Dumb Charades challenges participants to guess technical terms, technologies, or concepts through gestures and acting — no words allowed. It's a perfect blend of tech knowledge, creativity, and entertainment.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Karipireddy Surya Teja Gopal Reddy - b22cs022@nitm.ac.in",
+      "Jishnu Duhan - b23cs037@nitm.ac.in",
+      "Shashank Umar Vaishy - b23cs019@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/bjokzKeJ85oBde3n6",
+    rulebookLink:
+      "https://drive.google.com/file/d/1HmEzD4GZKSFfKSp7VDifUtYwDU-3ztOj/view?usp=drive_link",
+  },
+
+  {
+    title: "Game of Codes",
+    slug: "game-of-codes",
+    category: "Coding",
+    img: "/events/coding/gameofcodes.webp",
+    desc: "Enter the ultimate coding arena with Game of Codes! Participants will battle through multiple rounds of coding challenges, debugging tasks, and logic puzzles. Only the sharpest minds will survive till the end and claim the throne.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Prem Kumar Gupta - b22cs026@nitm.ac.in",
+      "Charity Rymbai - b23me010@nitm.ac.in",
+      "Aryan Raj - b23ec042@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/HQU5fYqXP83v9ncW8",
+    rulebookLink:
+      "https://drive.google.com/file/d/1UkUeoQbWAIGY_vyTbpvkwqTKNMCFHlmS/view?usp=drive_link",
+  },
+
+  {
+    title: "404 Killer Not Found",
+    slug: "404-killer-not-found",
+    category: "Coding",
+    img: "/events/coding/404killer.jpeg",
+    desc: "Errors are everywhere — can you eliminate them? 404 Killer Not Found is a debugging-focused event where participants must identify and fix bugs in given code snippets. Speed, precision, and deep understanding of programming concepts will determine the ultimate bug slayer.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "T Vikram Rathod - b22cs033@nitm.ac.in",
+      "Jishnu Duhan - b23cs037@nitm.ac.in",
+      "Austin Joel Dympep - b23cs035@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/Cik9URfnm93c726o7",
+    rulebookLink:
+      "https://drive.google.com/file/d/1zYEDwQOF8Epa_mluQY75aHi_3UB5HKLj/view?usp=drive_link",
+  },
+
+  {
+    title: "Treasure Hunt",
+    slug: "treasure-hunt",
+    category: "Coding",
+    img: "/events/coding/treasurehunt.jpg",
+    desc: "Embark on an exciting journey of clues, puzzles, and hidden challenges in the Treasure Hunt! Participants must solve technical riddles and coding-based hints to progress through stages and uncover the final treasure.",
+    prize: "Exciting Prizes",
+    venue: "Campus Wide",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Prem Kumar Gupta - b22cs026@nitm.ac.in",
+      "Shashank Umar Vaishy - b23cs019@nitm.ac.in",
+      "Khushi Kumari - b23ec008@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/tALHtmmHLtvNTT5g9",
+    rulebookLink:
+      "https://drive.google.com/file/d/1FbKqeor9yAdPxQY10yGBSY6uMJZwfjuZ/view?usp=drive_link",
+  },
+
+  {
+    title: "Smart Machine",
+    slug: "smart-machine",
+    category: "Coding",
+    img: "/events/coding/smartmachine.jpeg",
+    desc: "Dive into the world of intelligent systems with Smart Machine! This event focuses on building or conceptualizing smart solutions using AI, ML, or automation. Participants will showcase innovative ideas that simulate real-world intelligent behavior.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Satyajeet Rai - b22ec021@nitm.ac.in",
+      "Ayush Kumar Singh - b23ec003@nitm.ac.in",
+      "Chuncha Hemchand - b23cs020@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/NthY1Ev8sAs8vh6U7",
+    rulebookLink:
+      "https://drive.google.com/file/d/1Fg9LBAIzNhZLIi5oEigc7UJwwjIxHOn2/view?usp=drive_link",
+  },
+
+  {
+    title: "Neural Quest",
+    slug: "neural-quest",
+    category: "Coding",
+    img: "/events/coding/neuralquest.jpg",
+    desc: "Challenge your knowledge of artificial intelligence and neural networks in Neural Quest! This event includes quizzes, problem-solving, and practical tasks related to AI/ML concepts, testing both theoretical understanding and application skills.",
+    prize: "Exciting Prizes",
+    venue: "CS Lab, A Block",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "T Vikram Rathore - b22cs033@nitm.ac.in",
+      "Jishnu Duhan - b23cs037@nitm.ac.in",
+      "Ayush Kumar Singh - b23ec003@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/HrZxoS4MGMHpijgLA",
+    rulebookLink:
+      "https://drive.google.com/file/d/1qGDf0jo2VM6fNQQ-yGNq7FshBrORZv5G/view?usp=drive_link",
+  },
+
+  // Robotics Events
+  {
+    title: "Robo Rumble",
+    slug: "robo-rumble",
+    category: "Robotics",
+    img: "/events/robotics/roborumble.jpeg",
+    desc: "Gear up for Robo Rumble — an electrifying battle of bots where machines clash in an arena of destruction and strategy. Design and control your robot to outmaneuver and outlast your opponents in this ultimate test of engineering and combat skills.",
+    prize: "Exciting Prizes",
+    venue: "Between C & D Block || Lecture Hall Complex",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Shivam Kumar - b22me011@nitm.ac.in",
+      "Rahul Kumar - Convenor",
+      "Akash Shah - b23me008@nitm.ac.in",
+      "Sachin Chaurasia - b23ee010@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/aRTdqwu7fgUGXgKK9",
+    rulebookLink:
+      "https://drive.google.com/file/d/1A2HTeTnLjj5S_KsPOodj4n1Pu_yvfKIM/view?usp=drive_link",
+  },
+
+  {
+    title: "Goal Against Time",
+    slug: "goal-against-time",
+    category: "Robotics",
+    img: "/events/robotics/goalagainsttime.jpg",
+    desc: "Precision meets speed in Goal Against Time! Participants must design robots capable of completing specific tasks within a limited time frame. Efficiency, accuracy, and quick thinking are the keys to winning.",
+    prize: "Exciting Prizes",
+    venue: "Robotics Arena",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Aditya Kumar Pandey - b22me018@nitm.ac.in",
+      "Himanshu Kumar Jha - b22me027@nitm.ac.in",
+      "Vishnu Kumar - b23ee014@nitm.ac.in",
+      "Akshaj Sunil - b23me020@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/B2Gqw9UkGrqDwWAY7",
+    rulebookLink:
+      "https://drive.google.com/file/d/1N12oqlPEpnqmzlds9Io0XBuDcPo3tVqV/view?usp=drive_link",
+  },
+
+  {
+    title: "Humanoid",
+    slug: "humanoid",
+    category: "Robotics",
+    img: "/events/robotics/humanoid.jpeg",
+    desc: "Experience the future with Humanoid — an event focused on designing and showcasing human-like robots. Participants will demonstrate innovation in movement, balance, and interaction, pushing the boundaries of robotics.",
+    prize: "Exciting Prizes",
+    venue: "Robotics Arena",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Debashish Nayak - b22ec030@nitm.ac.in",
+      "Sanapala Rahul - b22ee010@nitm.ac.in",
+      "Adharsh Barman - b23ee005@nitm.ac.in",
+      "Saksham Singhania - b23ce026@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/dJc4yfxEqprjy2vp6",
+    rulebookLink:
+      "https://drive.google.com/file/d/1-i1wxi5NPTZ8ghdhJvsO2pKzsWM4phw2/view?usp=drive_link",
+  },
+
+  {
+    title: "Roborush",
+    slug: "roborush",
+    category: "Robotics",
+    img: "/events/robotics/roborush.jpeg",
+    desc: "Test the speed and agility of your robot in Roborush! Navigate through obstacles, race against time, and outperform competitors in this high-speed robotics challenge.",
+    prize: "Exciting Prizes",
+    venue: "Robotics Arena",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Rohit Aryan - b22ee017@nitm.ac.in",
+      "Raunak Prabhakar - b23cs041@nitm.ac.in",
+      "Parag Das - b23ee013@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/sxpV4RZj7V4FYKBU9",
+    rulebookLink:
+      "https://drive.google.com/file/d/1yQg0r_hFR-umltuEAkL_ZgkliSkWWQIt/view?usp=drive_link",
+  },
+
+  {
+    title: "Drone Racing",
+    slug: "drone-racing",
+    category: "Robotics",
+    img: "/events/robotics/droneracing.jpeg",
+    desc: "Take flight in Drone Racing! Compete in an adrenaline-pumping race where precision flying and speed determine the winner. Navigate through challenging tracks and prove your piloting skills.",
+    prize: "Exciting Prizes",
+    venue: "Open Ground Arena",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Avinash Kumar Singh - b22cs012@nitm.ac.in",
+      "Sanapala Rahul - b22ee010@nitm.ac.in",
+      "Abhinav Hajong - b23ec006@nitm.ac.in",
+      "Aastha Mishra - b23me005@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/oMmiF9nRAHffsH339",
+    rulebookLink:
+      "https://drive.google.com/file/d/1ECqsCr7cpqMxQM28zMgSod-QohICUxub/view?usp=drive_link",
+  },
+
+  {
+    title: "Robodiction",
+    slug: "robodiction",
+    category: "Robotics",
+    img: "/events/robotics/robodiction.jpg",
+    desc: "A creative blend of robotics and communication, Robodiction challenges participants to interpret, build, or explain robotic concepts in an engaging way. Think fast, build smart, and communicate effectively!",
+    prize: "Exciting Prizes",
+    venue: "Robotics Arena",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Ankit Raj - b22ee005@nitm.ac.in",
+      "B Palguna Rao - b22ee026@nitm.ac.in",
+      "Gaurav Kumar Singh - b23ce006@nitm.ac.in",
+      "Vignesh Patil - b23cs005@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/r4Y69TpQx38c99z38",
+    rulebookLink:
+      "https://drive.google.com/file/d/1PBs4oOepjEG_paH2FLmaFp44CViLoNpx/view?usp=drive_link",
+  },
+
+  {
+    title: "Techstorm",
+    slug: "techstorm",
+    category: "Robotics",
+    img: "/events/robotics/techstorm.jpeg",
+    desc: "Enter Techstorm — a dynamic robotics event combining innovation, design, and technical challenges. Participants will tackle multiple problem statements, showcasing their engineering and problem-solving abilities.",
+    prize: "Exciting Prizes",
+    venue: "Robotics Arena",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Avinash Kumar Singh - b22cs012@nitm.ac.in",
+      "Sanapala Rahul - b22ee010@nitm.ac.in",
+      "Aman Kumar - b23cs038@nitm.ac.in",
+      "Pradip Kumar Mondal - b23ec034@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/jbZKnAji7Kb5bqdU7",
+    rulebookLink:
+      "https://drive.google.com/file/d/1tkpUeQ8Mu5WX1SiwolJktvhTw1PYxMPO/view?usp=drive_link",
+  },
+
+  {
+    title: "Autonomous Bot",
+    slug: "autonomous-bot",
+    category: "Robotics",
+    img: "/events/robotics/autonomousbot.jpeg",
+    desc: "Build intelligent machines in Autonomous Bot! Design robots capable of navigating and performing tasks without human intervention. This event tests your skills in automation, sensors, and AI integration.",
+    prize: "Exciting Prizes",
+    venue: "Robotics Arena",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Pankaj Saraswat - b22ec040@nitm.ac.in",
+      "Purushottam Thakur - b23cs014@nitm.ac.in",
+      "Chinagudaba Nikhil - b23me027@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/DNXHAvz7aTRiSsqy5",
+    rulebookLink:
+      "https://drive.google.com/file/d/1cTM_2d-QL0hBh3bRK02jOdRLFICalHLV/view?usp=drive_link",
+  },
+
+  {
+    title: "Art Battle",
+    slug: "art-battle",
+    category: "Photography and Fine Arts",
+    img: "/events/fine-arts/artbattle.jpeg",
+    desc: "Unleash your creativity in Art Battle — a live art competition where imagination meets speed. Participants will create stunning artworks within a limited time based on surprise themes. It’s a battle of creativity, expression, and artistic skill where every stroke counts.",
+    prize: "Exciting Prizes",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Satyam Singh - b23ce020@nitm.ac.in",
+      "Md. Syed Ashraf Rafi - b23ec001@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/Z2URVYsRDUkdZWZT7",
+    rulebookLink:
+      "https://drive.google.com/file/d/1XDFC5izcnTcNwWpf9CtMUUFtq1T9POPX/view?usp=drive_link",
+  },
+
+  {
+    title: "Photo Exhibition",
+    slug: "photo-exhibition",
+    category: "Photography and Fine Arts",
+    img: "/events/fine-arts/photoexhibition.jpg",
+    desc: "Capture moments, tell stories, and showcase your perspective through the Photo Exhibition. Participants can submit their best photographs based on given themes. From nature to urban life, every frame should reflect creativity, emotion, and storytelling.",
+    prize: "Exciting Prizes",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Satyam Singh - b23ce020@nitm.ac.in",
+      "Md. Syed Ashraf Rafi - b23ec001@nitm.ac.in",
+    ],
+    registerLink: "https://forms.gle/JioRGRsd869p1v1B8",
+    rulebookLink:
+      "https://drive.google.com/file/d/1cNibOgyFf2xbmxrNQd-wI_iNT_aL0RBB/view?usp=drive_link",
+  },
+  {
+    title: "Challenge on Green Technology",
+    slug: "challenge-on-green-technology",
+    category: "E-Cell",
+    img: "/events/ecell/cogt.png",
+    desc: "Innovate for a sustainable future in the Challenge on Green Technology! Participants are invited to propose and develop eco-friendly solutions that address environmental issues such as renewable energy, waste management, and sustainable living. Turn your ideas into impactful innovations that can shape a greener tomorrow.",
+    prize: "Exciting Prizes",
     deadline: "15th September 2025",
-    venue: "Main Auditorium, Tech Campus",
-    schedule: "16th September 2025, 9:00 AM – 17th September 2025, 9:00 AM",
-    rules: [
-      "Teams of 2-4 participants allowed.",
-      "All projects must be built during the hackathon.",
-      "Plagiarism will lead to disqualification.",
-      "Judges’ decision will be final.",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Swarnim Suman - b24cs046@nitm.ac.in",
+      " Nazia Sheikh - b23ce029@nitm.ac.in",
+      "Anjali - b23me033@nitm.ac.in",
     ],
-    faq: [
-      { q: "Do I need prior hackathon experience?", a: "No! Beginners are welcome. Mentors will guide you." },
-      { q: "Will food and internet be provided?", a: "Yes, meals, snacks, and Wi-Fi will be available." },
-    ],
-    contacts: ["Rohan - +91 9876543210", "Aditi - +91 8765432109"],
-    registerLink: "https://example.com/codequest",
-    time: "To be announced",
+    registerLink: "https://forms.gle/bQiRMVCT3yHMKKzm6",
+    rulebookLink:
+      "https://drive.google.com/file/d/1cNibOgyFf2xbmxrNQd-wI_iNT_aL0RBB/view?usp=drive_link",
   },
-  // New Coding Events
+
   {
-    title: "AI Code Clash",
-    slug: "ai-code-clash",
-    category: "Coding",
-    img: "https://i.im.ge/2023/10/22/t5G7fa.max-bender-XIVDN9cxOVc-unsplash-2.jpg?w=2048&q=10",
-    desc: "Build AI-driven applications to solve challenges in healthcare, education, or sustainability.",
-    prize: "₹60,000 + Internship Opportunities",
-    deadline: "13th September 2025",
-    venue: "AI Lab, Tech Campus",
-    schedule: "14th September 2025, 10:00 AM – 15th September 2025, 10:00 AM",
-    rules: [
-      "Teams of 2-5 participants.",
-      "Use any AI/ML framework (e.g., TensorFlow, PyTorch).",
-      "No pre-built solutions allowed.",
-      "Presentation to judges required.",
+    title: "Tech Challenge on Agriculture",
+    slug: "tech-challenge-on-agriculture",
+    category: "E-Cell",
+    img: "/events/ecell/tcoa.jpg",
+    desc: "Revolutionize agriculture with technology in the Tech Challenge on Agriculture! Participants will develop innovative solutions to improve farming efficiency, crop monitoring, irrigation systems, and supply chain management using modern technologies like IoT, AI, and data analytics.",
+    prize: "Exciting Prizes",
+    deadline: "15th September 2025",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Swarnim Suman - b24cs046@nitm.ac.in",
+      " Nazia Sheikh - b23ce029@nitm.ac.in",
+      "Anjali - b23me033@nitm.ac.in",
     ],
-    faq: [
-      { q: "Can we use pre-trained models?", a: "Yes, but significant customization is expected." },
-      { q: "Is cloud computing access provided?", a: "Yes, limited cloud credits will be provided." },
-    ],
-    contacts: ["Vikram - +91 9123456700", "Shalini - +91 8765432190"],
-    registerLink: "https://example.com/aicodeclash",
-    time: "To be announced",
+    registerLink: "https://forms.gle/Aj5qier6oxJd4u5S8",
+    rulebookLink:
+      "https://drive.google.com/file/d/1cNibOgyFf2xbmxrNQd-wI_iNT_aL0RBB/view?usp=drive_link",
   },
   {
-    title: "Web Dev Showdown",
-    slug: "web-dev-showdown",
-    category: "Coding",
-    img: "https://i.im.ge/2023/10/22/t55uKG.coding1-min.png?w=2048&q=10",
-    desc: "Create responsive and innovative web applications under a time crunch.",
-    prize: "₹30,000 + Certificates",
-    deadline: "10th September 2025",
-    venue: "Computer Lab A, Block B",
-    schedule: "11th September 2025, 9:00 AM – 6:00 PM",
-    rules: [
-      "Teams of 1-3 participants.",
-      "Use any web framework (React, Angular, etc.).",
-      "Apps must be mobile-friendly.",
-      "Judging based on functionality and UI.",
+    title: "Doodle Art",
+    slug: "doodle-art",
+    category: "Design Club",
+    img: "/events/design/doodle.jpg",
+    desc: "Let your imagination flow freely in Doodle Art! This event challenges participants to create expressive and creative doodles based on given themes. Whether abstract or structured, your artwork should reflect originality, storytelling, and artistic flair.",
+    prize: "Exciting Prizes",
+    deadline: "15th September 2025",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Satyam Singh - b23ce020@nitm.ac.in",
+      "Nazia Hasan Sheikh - b23ce029@nitm.ac.in",
     ],
-    faq: [
-      { q: "Can we use templates?", a: "Basic templates are allowed, but originality is key." },
-      { q: "Will hosting be provided?", a: "Yes, temporary hosting will be available." },
+    registerLink: "https://forms.gle/BTK23XfNnwy3JFHC9",
+    rulebookLink:
+      "https://drive.google.com/file/d/1LEhtTnaiZMBZPWFlPB643qv0-y8ynAYX/view?usp=drive_link",
+  },
+
+  {
+    title: "Canva Design Battle",
+    slug: "canva-design-battle",
+    category: "Design Club",
+    img: "/events/design/canva.webp",
+    desc: "Showcase your creativity in the Canva Design Battle! Participants will compete to create visually stunning designs using Canva within a limited time. From posters to social media creatives, design skills, aesthetics, and originality will decide the winner.",
+    prize: "Exciting Prizes",
+    deadline: "15th September 2025",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Satyam Singh - b23ce020@nitm.ac.in",
+      "Nazia Hasan Sheikh - b23ce029@nitm.ac.in",
     ],
-    contacts: ["Anil - +91 8899776644", "Tara - +91 7766554422"],
-    registerLink: "https://example.com/webdevshowdown",
-    time: "To be announced",
+    registerLink: "https://forms.gle/9pxgzoriT9REaqvV9",
+    rulebookLink:
+      "https://drive.google.com/file/d/16lQsRYKRrk0PD-rlIDmJHOn8T0sfLvLd/view?usp=drive_link",
   },
   {
-    title: "Code Golf Challenge",
-    slug: "code-golf-challenge",
-    category: "Coding",
-    img: "https://i.im.ge/2023/10/22/t9QZRh.lorenzo-herrera-p0j-mE6mGo4-unsplash-1.jpg?w=2048&q=10",
-    desc: "Solve algorithmic problems with the shortest possible code in your favorite programming language.",
-    prize: "₹20,000 + Goodies",
-    deadline: "17th September 2025",
-    venue: "Lecture Hall 3, Block C",
-    schedule: "18th September 2025, 1:00 PM – 5:00 PM",
-    rules: [
-      "Individual participation only.",
-      "Solutions judged on code length and correctness.",
-      "Any programming language allowed.",
-      "No internet access during the event.",
+    title: "Star Gazing",
+    slug: "star-gazing",
+    category: "Astronomy Club",
+    img: "/events/astro/stargazing.webp",
+    desc: "Explore the wonders of the night sky in Star Gazing! Participants will get a chance to observe celestial objects like planets, stars, and galaxies using telescopes. Guided by experts, this event offers a mesmerizing experience into the vast universe.",
+    prize: "Exciting Prizes",
+    deadline: "15th September 2025",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Ujjawal Jhajharia - b22ee007@nitm.ac.in",
+      "Rounak Saha - b22cs008@nitm.ac.in",
+      "Vishnu Kumar - b23ee014@nitm.ac.in",
     ],
-    faq: [
-      { q: "What languages are best for code golf?", a: "Python, C, or GolfScript are popular, but any language works." },
-      { q: "Are there practice problems?", a: "Yes, sample problems will be shared post-registration." },
-    ],
-    contacts: ["Suresh - +91 9988776633", "Lila - +91 7766443311"],
-    registerLink: "https://example.com/codegolf",
-    time: "To be announced",
+    registerLink: "",
+    rulebookLink:
+      "https://drive.google.com/file/d/1ZI9UhXlhg37QRI2OBuHoRzaFtAL7LOUH/view?usp=drive_link",
   },
-  // Existing Robotics Events
-  {
-    title: "Robo Race",
-    slug: "robo-race",
-    category: "Robotics",
-    img: "https://i.im.ge/2023/10/23/tjfSZ6.apryan-widodo-LVKVvuhq5r4-unsplash-1.jpg?w=2048&q=10",
-    desc: "A thrilling race where autonomous robots compete on a challenging obstacle track.",
-    prize: "₹30,000 + Trophies",
-    deadline: "18th September 2025",
-    venue: "Mechanical Workshop Ground",
-    schedule: "20th September 2025, 11:00 AM – 4:00 PM",
-    rules: [
-      "Teams of 2-3 allowed.",
-      "Robots must be built prior to the event.",
-      "Robots must complete the track within time limit.",
-    ],
-    faq: [
-      { q: "What type of robots are allowed?", a: "Wheeled robots only, no drones." },
-      { q: "Can we use ready-made kits?", a: "Yes, but innovation will be rewarded." },
-    ],
-    contacts: ["Manav - +91 8899776655", "Priya - +91 9988223344"],
-    registerLink: "https://example.com/roborace",
-    time: "To be announced",
-  },
-  {
-    title: "Line Follower Challenge",
-    slug: "line-follower-challenge",
-    category: "Robotics",
-    img: "https://i.im.ge/2023/10/23/tjfgGG.marilia-castelli-wCVNhNnI-2s-unsplash-1.jpg?w=2048&q=10",
-    desc: "Robots must follow a track of black-and-white lines with maximum precision and speed.",
-    prize: "₹15,000 + Medals",
-    deadline: "14th September 2025",
-    venue: "Robotics Lab, Block C",
-    schedule: "15th September 2025, 2:00 PM – 6:00 PM",
-    rules: [
-      "Teams of max 3 participants.",
-      "Robots must autonomously follow the line.",
-      "Manual control is not allowed.",
-    ],
-    faq: [
-      { q: "Can I use sensors?", a: "Yes, IR or LDR sensors are recommended." },
-      { q: "What is the track size?", a: "Track details will be revealed on the event day." },
-    ],
-    contacts: ["Karan - +91 7766554433", "Simran - +91 8877665544"],
-    registerLink: "https://example.com/linefollower",
-    time: "To be announced",
-  },
-  // New Robotics Events
-  {
-    title: "Drone Obstacle Course",
-    slug: "https://i.im.ge/2023/10/23/tjkiEx.aditya-chinchure-GKkm9OXObCM-unsplash-1.jpg?w=2048&q=10",
-    category: "Robotics",
-    img: "/images/dronecourse.jpg",
-    desc: "Navigate drones through a complex obstacle course with precision and speed.",
-    prize: "₹35,000 + Certificates",
-    deadline: "19th September 2025",
-    venue: "Outdoor Arena, Tech Campus",
-    schedule: "21st September 2025, 12:00 PM – 5:00 PM",
-    rules: [
-      "Teams of 1-2 participants.",
-      "Drones must be pre-tested for safety.",
-      "Manual control allowed, autonomous for bonus points.",
-    ],
-    faq: [
-      { q: "Can we use custom-built drones?", a: "Yes, but they must meet safety standards." },
-      { q: "Is there a weight limit?", a: "Max 2 kg for drones." },
-    ],
-    contacts: ["Vishal - +91 8877663322", "Riya - +91 9988775544"],
-    registerLink: "https://example.com/dronecourse",
-    time: "To be announced",
-  },
-  {
-    title: "Robo Sumo",
-    slug: "robo-sumo",
-    category: "Robotics",
-    img: "https://i.im.ge/2023/10/23/tjf4DX.Screenshot-2023-10-23-080427-1.png?w=2048&q=10",
-    desc: "Build robots to push opponents out of a circular arena in a sumo-style competition.",
-    prize: "₹25,000 + Trophies",
-    deadline: "16th September 2025",
-    venue: "Mechanical Lab, Block A",
-    schedule: "17th September 2025, 11:00 AM – 4:00 PM",
-    rules: [
-      "Teams of 2-3 participants.",
-      "Robots must weigh under 3 kg.",
-      "No intentional damage to opponent robots.",
-    ],
-    faq: [
-      { q: "Can we modify robots between rounds?", a: "Yes, within 5-minute breaks." },
-      { q: "Are there size restrictions?", a: "Max 20x20 cm base." },
-    ],
-    contacts: ["Nikhil - +91 7766445599", "Anita - +91 8877664433"],
-    registerLink: "https://example.com/robosumo",
-    time: "To be announced",
-  },
-  // Existing Astro Events
-  {
-    title: "Stargazing Night",
-    slug: "stargazing-night",
-    category: "Astro",
-    img: "https://cdn.britannica.com/60/190760-131-F1576E0B/space-background-telescope-silhouette-NASA-image-elements.jpg?w=2048&q=10",
-    desc: "An evening with telescopes under the night sky, guided by experts in astronomy.",
-    prize: "Participation Certificates",
-    deadline: "16th September 2025",
-    venue: "Astronomy Club Terrace",
-    schedule: "18th September 2025, 8:00 PM – Midnight",
-    rules: [
-      "Individual and groups allowed.",
-      "No flash photography near telescopes.",
-    ],
-    faq: [
-      { q: "Do I need to bring a telescope?", a: "No, telescopes will be provided." },
-      { q: "Is prior knowledge required?", a: "No, experts will explain everything." },
-    ],
-    contacts: ["Rahul - +91 8899776655", "Sneha - +91 7788994455"],
-    registerLink: "https://example.com/stargazing",
-    time: "To be announced",
-  },
+
   {
     title: "Astro Quiz",
     slug: "astro-quiz",
-    category: "Astro",
-    img: "https://www.shutterstock.com/image-vector/cosmic-convergence-astronauts-journey-through-600nw-2315587451.jpg?w=2048&q=10",
-    desc: "Quiz competition on space science, astronomy, and astrophysics.",
-    prize: "₹8,000 + Certificates",
-    deadline: "11th September 2025",
-    venue: "Physics Lecture Hall",
-    schedule: "12th September 2025, 2:00 PM – 5:00 PM",
-    rules: [
-      "Teams of 2 allowed.",
-      "No internet devices during quiz.",
-      "Quiz will have MCQs and buzzer round.",
-    ],
-    faq: [
-      { q: "Is the quiz only for science students?", a: "No, open for all participants." },
-      { q: "Will there be a negative marking?", a: "Yes, -1 for every wrong answer." },
-    ],
-    contacts: ["Pooja - +91 6655778899", "Adarsh - +91 7766443322"],
-    registerLink: "https://example.com/astroquiz",
-    time: "To be announced",
-  },
-  // New Astro Events
-  {
-    title: "Rocket Design Challenge",
-    slug: "rocket-design-challenge",
-    category: "Astro",
-    img: "https://i.im.ge/2023/10/23/tjfV2y.hung-nguyen-phi-5Bo6OfopSi0-unsplash-1.jpg?w=2048&q=10",
-    desc: "Design and simulate a model rocket for a hypothetical space mission.",
-    prize: "₹20,000 + Certificates",
+    category: "Astronomy Club",
+    img: "/events/astro/astroquiz.jpeg",
+    desc: "Test your knowledge of the universe in the Astro Quiz! From planets and stars to black holes and space missions, this quiz will challenge your understanding of astronomy and astrophysics in a fun and competitive format.",
+    prize: "Exciting Prizes",
     deadline: "15th September 2025",
-    venue: "Aerospace Lab, Block D",
-    schedule: "16th September 2025, 10:00 AM – 4:00 PM",
-    rules: [
-      "Teams of 2-4 participants.",
-      "Use simulation software provided.",
-      "Designs judged on feasibility and creativity.",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Ujjawal Jhajharia - b22ee007@nitm.ac.in",
+      "Rounak Saha - b22cs008@nitm.ac.in",
+      "Vishnu Kumar - b23ee014@nitm.ac.in",
     ],
-    faq: [
-      { q: "Do we need aerospace knowledge?", a: "Basic guidance will be provided." },
-      { q: "Can we use physical models?", a: "Only digital simulations are required." },
-    ],
-    contacts: ["Siddhant - +91 8877662211", "Kavya - +91 9988773322"],
-    registerLink: "https://example.com/rocketdesign",
-    time: "To be announced",
+    registerLink: "#",
+    rulebookLink: "https://drive.google.com/file/d/1VtZ5Q5DdZPGiJ0x7tQU1qzDr037kqO7Y/view?usp=drive_link",
   },
+
   {
-    title: "Astro Photography Workshop",
-    slug: "astro-photography-workshop",
-    category: "Astro",
-    img: "https://hips.hearstapps.com/pop.h-cdn.co/assets/17/11/2560x1920/sd-aspect-1489610446-milkyway.jpg?resize=768:*",
-    desc: "Learn to capture stunning images of celestial bodies with expert guidance.",
-    prize: "Certificates + Feature in Club Magazine",
-    deadline: "17th September 2025",
-    venue: "Astronomy Club Terrace",
-    schedule: "19th September 2025, 7:00 PM – 10:00 PM",
-    rules: [
-      "Bring your own camera or use provided equipment.",
-      "Follow instructor guidelines for telescope use.",
-      "Submit one photo for exhibition.",
+    title: "Telescope Making",
+    slug: "telescope-making",
+    category: "Astronomy Club",
+    img: "/events/astro/telescope.jpg",
+    desc: "Build your own window to the universe in Telescope Making! Participants will learn the fundamentals of optics and assemble a working telescope. This hands-on event combines theory with practical skills for an enriching experience.",
+    prize: "Exciting Prizes",
+    deadline: "15th September 2025",
+    venue: "NIT Campus",
+    schedule: "9th April 2026 – 11th April 2026",
+    contacts: [
+      "Ujjawal Jhajharia - b22ee007@nitm.ac.in",
+      "Rounak Saha - b22cs008@nitm.ac.in",
+      "Vishnu Kumar - b23ee014@nitm.ac.in",
     ],
-    faq: [
-      { q: "Do I need a DSLR?", a: "No, mobile cameras with manual settings are fine." },
-      { q: "Is prior experience needed?", a: "No, the workshop is beginner-friendly." },
-    ],
-    contacts: ["Arnav - +91 7766442288", "Tanya - +91 8877663399"],
-    registerLink: "https://example.com/astrophotography",
-    time: "To be announced",
+    registerLink: "#",
+    rulebookLink: "#",
   },
   // Existing Dept Event
   {
-    title: "Design Sprint",
-    slug: "design-sprint",
+    title: "The Hiring Panel",
+    slug: "the-hiring-panel",
     category: "Dept",
-    img: "/images/designsprint.jpg",
+    img: "/events/designsprint.jpg",
     desc: "A fast-paced event focused on UI/UX problem solving and creative design thinking challenges.",
     prize: "₹20,000 + Certificates",
     deadline: "10th September 2025",
@@ -308,8 +557,14 @@ const events = [
       "Respect the theme provided at the event start.",
     ],
     faq: [
-      { q: "What tools can I use?", a: "You can use Figma, Adobe XD, Photoshop, or any design tool." },
-      { q: "Will I get feedback?", a: "Yes, judges will provide constructive feedback after results." },
+      {
+        q: "What tools can I use?",
+        a: "You can use Figma, Adobe XD, Photoshop, or any design tool.",
+      },
+      {
+        q: "Will I get feedback?",
+        a: "Yes, judges will provide constructive feedback after results.",
+      },
     ],
     contacts: ["Neha - +91 9123456789", "Arjun - +91 9988776655"],
     registerLink: "https://example.com/designsprint",
@@ -332,8 +587,14 @@ const events = [
       "Max 3 submissions per participant.",
     ],
     faq: [
-      { q: "Can I use DSLR or mobile?", a: "Yes, any camera device is allowed." },
-      { q: "Do I need to print photos?", a: "Yes, bring printed copies for exhibition." },
+      {
+        q: "Can I use DSLR or mobile?",
+        a: "Yes, any camera device is allowed.",
+      },
+      {
+        q: "Do I need to print photos?",
+        a: "Yes, bring printed copies for exhibition.",
+      },
     ],
     contacts: ["Kabir - +91 6655443322", "Ananya - +91 7766889900"],
     registerLink: "https://example.com/photography",
@@ -356,8 +617,14 @@ const events = [
       "Follow the provided brand guidelines.",
     ],
     faq: [
-      { q: "Can I use Canva?", a: "Yes, but professional tools like Illustrator are preferred." },
-      { q: "Will the brief be shared early?", a: "Brief will be revealed at the event start." },
+      {
+        q: "Can I use Canva?",
+        a: "Yes, but professional tools like Illustrator are preferred.",
+      },
+      {
+        q: "Will the brief be shared early?",
+        a: "Brief will be revealed at the event start.",
+      },
     ],
     contacts: ["Rhea - +91 7766558877", "Soham - +91 8877661122"],
     registerLink: "https://example.com/logodesign",
@@ -379,7 +646,10 @@ const events = [
       "Max size: A3 for physical, 1080p for digital.",
     ],
     faq: [
-      { q: "Can I submit both digital and physical?", a: "No, choose one medium per entry." },
+      {
+        q: "Can I submit both digital and physical?",
+        a: "No, choose one medium per entry.",
+      },
       { q: "Is there a theme?", a: "Yes, announced at the event start." },
     ],
     contacts: ["Ishaan - +91 9988774433", "Nidhi - +91 7766445566"],
@@ -403,8 +673,14 @@ const events = [
       "Follow fair play policies.",
     ],
     faq: [
-      { q: "Do I need my own setup?", a: "Basic PCs will be provided. You may bring your peripherals." },
-      { q: "Can we register for multiple games?", a: "Yes, but schedules may overlap." },
+      {
+        q: "Do I need my own setup?",
+        a: "Basic PCs will be provided. You may bring your peripherals.",
+      },
+      {
+        q: "Can we register for multiple games?",
+        a: "Yes, but schedules may overlap.",
+      },
     ],
     contacts: ["Akash - +91 8899221100", "Sanya - +91 7778889990"],
     registerLink: "https://example.com/esports",
@@ -426,104 +702,17 @@ const events = [
       "Respect gaming ethics.",
     ],
     faq: [
-      { q: "Do I need to bring my laptop?", a: "No, systems will be provided." },
-      { q: "Which games are featured?", a: "CS 1.6, NFS Most Wanted, Blur, and more." },
+      {
+        q: "Do I need to bring my laptop?",
+        a: "No, systems will be provided.",
+      },
+      {
+        q: "Which games are featured?",
+        a: "CS 1.6, NFS Most Wanted, Blur, and more.",
+      },
     ],
     contacts: ["Ritika - +91 7766552233", "Aryan - +91 6677889900"],
     registerLink: "https://example.com/lanparty",
-    time: "To be announced",
-  },
-  {
-    title: "IoT Hackathon",
-    slug: "iot-hackathon",
-    category: "Other Hackathons",
-    img: "/images/iothackathon.jpg",
-    desc: "Develop innovative IoT solutions for smart homes, cities, or agriculture.",
-    prize: "₹45,000 + Hardware Kits",
-    deadline: "18th September 2025",
-    venue: "Electronics Lab, Block C",
-    schedule: "19th September 2025, 9:00 AM – 20th September 2025, 9:00 AM",
-    rules: [
-      "Teams of 2-4 participants.",
-      "Prototypes must include IoT hardware.",
-      "Provide a working demo to judges.",
-    ],
-    faq: [
-      { q: "Will hardware be provided?", a: "Basic kits like Raspberry Pi will be available." },
-      { q: "Can we use cloud platforms?", a: "Yes, AWS IoT or similar platforms are allowed." },
-    ],
-    contacts: ["Ravi - +91 8877665544", "Pallavi - +91 9988772211"],
-    registerLink: "https://example.com/iothackathon",
-    time: "To be announced",
-  },
-  {
-    title: "Blockchain Innovate",
-    slug: "blockchain-innovate",
-    category: "Other Hackathons",
-    img: "/images/blockchain.jpg",
-    desc: "Build decentralized applications using blockchain technology for finance, supply chain, or social impact.",
-    prize: "₹50,000 + Certificates",
-    deadline: "16th September 2025",
-    venue: "Computer Lab B, Block D",
-    schedule: "17th September 2025, 10:00 AM – 18th September 2025, 10:00 AM",
-    rules: [
-      "Teams of 2-4 participants.",
-      "Use any blockchain platform (Ethereum, Solana, etc.).",
-      "Smart contracts must be functional.",
-    ],
-    faq: [
-      { q: "Do we need blockchain experience?", a: "Basic tutorials will be provided pre-event." },
-      { q: "Can we use testnets?", a: "Yes, testnets are recommended for demos." },
-    ],
-    contacts: ["Sameer - +91 7766446677", "Aisha - +91 8877669988"],
-    registerLink: "https://example.com/blockchain",
-    time: "To be announced",
-  },
-  {
-    title: "AR/VR Hackathon",
-    slug: "ar-vr-hackathon",
-    category: "Other Hackathons",
-    img: "/images/arvrhackathon.jpg",
-    desc: "Create immersive augmented or virtual reality experiences for education or entertainment.",
-    prize: "₹40,000 + VR Headsets",
-    deadline: "14th September 2025",
-    venue: "Multimedia Lab, Block E",
-    schedule: "15th September 2025, 9:00 AM – 16th September 2025, 9:00 AM",
-    rules: [
-      "Teams of 2-5 participants.",
-      "Use AR/VR tools like Unity or Unreal Engine.",
-      "Demos must run on provided hardware.",
-    ],
-    faq: [
-      { q: "Do we need AR/VR devices?", a: "Basic headsets will be provided." },
-      { q: "Can we focus on AR only?", a: "Yes, AR or VR projects are both acceptable." },
-    ],
-    contacts: ["Kunal - +91 9988773344", "Mira - +91 7766448899"],
-    registerLink: "https://example.com/arvrhackathon",
-    time: "To be announced",
-  },
-  // Cultural Event (Excluded as it doesn't fit requested categories, but kept for completeness)
-  {
-    title: "Talent Show",
-    slug: "talent-show",
-    category: "Cultural",
-    img: "/images/talentshow.jpg",
-    desc: "Showcase your music, dance, or acting talent on stage in front of a live audience.",
-    prize: "₹25,000 + Certificates",
-    deadline: "17th September 2025",
-    venue: "Open Air Theatre",
-    schedule: "19th September 2025, 5:00 PM – 10:00 PM",
-    rules: [
-      "Individual and group performances allowed.",
-      "Time limit: 5 minutes per act.",
-      "Offensive content not allowed.",
-    ],
-    faq: [
-      { q: "Can I perform in multiple categories?", a: "Yes, but time slots will be limited." },
-      { q: "Are musical instruments provided?", a: "Basic setup will be provided, bring your instruments if needed." },
-    ],
-    contacts: ["Meera - +91 7788990011", "Dev - +91 8899001122"],
-    registerLink: "https://example.com/talentshow",
     time: "To be announced",
   },
 ];
@@ -537,580 +726,1572 @@ const eventsData = events.reduce((acc, ev) => {
 const teamData = {
   SAC: [
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdsw.e8bda59d.jpg&w=2048&q=75",
+      image: "/teams/sac/dean-studentwelfare.png",
       title: "Prof. Paonam Sudeep Mangang",
       subtitle: "Dean",
       handle: "Student's Welfare",
       borderColor: "#4F46E5", // Indigo
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAtanu.991f62a2.jpg&w=2048&q=75",
+      image: "/teams/sac/sac-president.png",
       title: "Dr. Atanu Singha Roy",
       subtitle: "SAC",
       handle: "President",
       borderColor: "#10B981", // Emerald
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FShuleenda.8d2b0b1b.jpg&w=2048&q=75",
-      title: "Dr. Salam Shuleenda Devi",
+      image: "/teams/sac/vp-technical.png",
+      title: "Dr. Md Nur Alom",
       subtitle: "Technical",
       handle: "Vice-President",
       borderColor: "#F59E0B", // Amber
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fswarop.dde2bb37.jpeg&w=2048&q=75",
-      title: "T. Swaroop Kumar",
+      image: "/teams/sac/gs1.jpg",
+      title: "Jitendra Dubey",
       subtitle: "General Secretary 1",
       handle: "Science & Technology",
       borderColor: "#EF4444", // Red
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FOmPrakash%20Yadav.a871c807.jpg&w=2048&q=75",
-      title: "Om Prakash Yadav",
+      image: "/teams/sac/gs2.png",
+      title: "Arush Raman",
       subtitle: "General Secretary 2",
+      handle: "Science & Technology",
+      borderColor: "#06B6D4", // Cyan
+    },
+    {
+      image: "/teams/sac/member-1.png",
+      title: "T.Bhanuprasad",
+      subtitle: "Member 1",
+      handle: "Science & Technology",
+      borderColor: "#06B6D4", // Cyan
+    },
+    {
+      image: "/teams/sac/member-2.png",
+      title: "Raman Kumar Morya",
+      subtitle: "Member 2",
       handle: "Science & Technology",
       borderColor: "#06B6D4", // Cyan
     },
   ],
   Dev: [
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGaurav.140cc4c6.png&w=2048&q=75",
-      title: "Gaurav",
-      subtitle: "Lead Developer",
-      handle: "@ganesh",
-      borderColor: "#4F46E5", // Indigo
-    },
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fjishnu.656e8b17.jpg&w=2048&q=75",
-      title: "Jishnu",
-      subtitle: "Lead Developer",
-      handle: "@ganesh",
-      borderColor: "#10B981", // Emerald
-    },
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcharity.1eca90cc.jpg&w=2048&q=75",
-      title: "Charity",
-      subtitle: "Lead Developer",
-      handle: "@ganesh",
+      image: "/teams/dev/dev.JPG",
+      title: "Kuldeep Chaudhary",
+      subtitle: "Web Developer Head",
+      handle: "b23ec019@nitm.ac.in",
       borderColor: "#F59E0B", // Amber
-    },
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faryan.3afb70e6.jpg&w=2048&q=75",
-      title: "Aryan",
-      subtitle: "Lead Developer",
-      handle: "@ganesh",
-      borderColor: "#06B6D4", // Cyan
     },
   ],
   Core: [
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBaidi.1acfc385.jpeg&w=2048&q=75",
-      title: "Ganesh Reidi",
-      subtitle: "Core Member",
-      handle: "@ganesh",
+      image: "/teams/core/core1.jpg",
+      title: "Aman Singh Rathore",
+      subtitle: "Head",
+      handle: "b22cs017@nitm.ac.in",
       borderColor: "#4F46E5", // Indigo
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAbhijith%20Sai.4bae7019.jpg&w=2048&q=75",
-      title: "Ganpu Abhijith Sai",
-      subtitle: "Core Member",
-      handle: "@abhijith",
+      image: "/teams/core/core2.jpg",
+      title: "Satyam Kumar Singh",
+      subtitle: "Head",
+      handle: "b22me026@nitm.ac.in",
       borderColor: "#10B981", // Emerald
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FT%20Vikram%20Rathod.bb31eb40.jpg&w=2048&q=75",
-      title: "T Vikram Rathod",
-      subtitle: "Core Member",
-      handle: "@vikram",
+      image: "/teams/core/core3.jpeg",
+      title: "Sanapala Rahul",
+      subtitle: "Head",
+      handle: "b22ee010@nitm.ac.in",
       borderColor: "#F59E0B", // Amber
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FNeelkanth.a47789e0.jpg&w=2048&q=75",
-      title: "Neelkantha Mandal",
-      subtitle: "Core Member",
-      handle: "@neelkantha",
+      image: "/teams/core/core4.jpg",
+      title: "Eshita Bhattacharjee",
+      subtitle: "Cordinator",
+      handle: "b23ee033@nitm.ac.in",
       borderColor: "#EF4444", // Red
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FJitta%20Chandra%20Sekhar.760cf396.jpg&w=2048&q=75",
-      title: "Jitta Chandra Sekhar",
-      subtitle: "Member",
-      handle: "@neelkantha",
+      image: "/teams/core/core5.jpg",
+      title: "Austin Joel Dympep",
+      subtitle: "Cordinator",
+      handle: "b23cs035@nitm.ac.in",
       borderColor: "#06B6D4", // Cyan
+    },
+    {
+      image: "/teams/core/core6.jpg",
+      title: "Govindam kumar",
+      subtitle: "Cordinator",
+      handle: "b23cs035@nitm.ac.in",
+      borderColor: "#06B6D4", // Cyan
+    },
+    {
+      image: "/teams/core/core7.jpg",
+      title: "Ippili Rupesh",
+      subtitle: "Cordinator",
+      handle: "b23ee011@nitm.ac.in",
+      borderColor: "#06B6D4", // Cyan
+    },
+    {
+      image: "/teams/core/core8.jpg",
+      title: "Akshith Reddy",
+      subtitle: "Member",
+      handle: "b24ec020@nitm.ac.in",
+      borderColor: "#06B6D4", // Cyan
+    },
+  ],
+  "Sponsor and Marketing": [
+    {
+      image: "/teams/core/core1.jpg",
+      title: "Aman Singh Rathore",
+      subtitle: "Head",
+      handle: "b22cs017@nitm.ac.in",
+      borderColor: "#4F46E5", // Indigo
+    },
+    {
+      image: "/teams/core/core2.jpg",
+      title: "Satyam Kumar Singh",
+      subtitle: "Head",
+      handle: "b22me026@nitm.ac.in",
+      borderColor: "#10B981", // Emerald
+    },
+    {
+      image: "/teams/sponsor/sponsor1.JPG",
+      title: "Arko Gupta",
+      subtitle: "Co-Cordinator",
+      handle: "b23ec031@nitm.ac.in",
+      borderColor: "#8B5CF6", // Violet
+    },
+    {
+      image: "/teams/sponsor/sponsor4.jpeg",
+      title: "Antonia Charliza Lyngdoh",
+      subtitle: "Co-Cordinator",
+      handle: "b23ce024@nitm.ac.in",
+      borderColor: "#EC4899", // Pink
+    },
+    {
+      image: "/teams/sponsor/sponsor2.jpg",
+      title: "Pettam Bhagirath",
+      subtitle: "Member",
+      handle: "b24ec025@nitm.ac.in",
+      borderColor: "#10B981", // Emerald
+    },
+    {
+      image: "/teams/sponsor/sponsor3.jpg",
+      title: "Anshu Mohit",
+      subtitle: "Member",
+      handle: "b24cs045@nitm.ac.in",
+      borderColor: "#F59E0B", // Amber
+    },
+  ],
+  "Publicity and Social Media": [
+    {
+      image: "/teams/publicity/publicity1.jpeg",
+      title: "Debashish Nayak",
+      subtitle: "Head",
+      handle: "b22ec030@nitm.ac.in",
+      borderColor: "#06B6D4", // Cyan
+    },
+    {
+      image: "",
+      title: "Amar Chaudhary",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#10B981", // Emerald
+    },
+    {
+      image: "/teams/publicity/publicity3.jpg",
+      title: "Iahunlang Kharmynthon",
+      subtitle: "Co-Cordinator",
+      handle: "b23ce016@nitm.ac.in",
+      borderColor: "#EF4444", // Red
+    },
+    {
+      image: "/teams/publicity/publicity4.jpg",
+      title: "Kurra Nandini",
+      subtitle: "Co-ordinator",
+      handle: "b23ec018@nitm.ac.in",
+      borderColor: "#8B5CF6", // Violet
+    },
+    {
+      image: "",
+      title: "Midasala Bhanu Vardhan Rao",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#EC4899", // Pink
+    },
+    {
+      image: "",
+      title: "Sumit Kumar",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#14B8A6", // Teal
+    },
+  ],
+  Robotics: [
+    {
+      image: "/teams/robotics/robotics1.jpg",
+      title: "Avinash Kumar Singh",
+      subtitle: "Convenor",
+      handle: "",
+      borderColor: "#F472B6",
+    }, // Pink
+    {
+      image: "/teams/robotics/robotics2.jpg",
+      title: "Pankaj Saraswat",
+      subtitle: "Convenor",
+      handle: "@rohit",
+      borderColor: "#06B6D4",
+    }, // Cyan
+    {
+      image: "/teams/robotics/robotics3.png",
+      title: "Shivam Kumar",
+      subtitle: "Head",
+      handle: "b22me011@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics4.jpeg",
+      title: "Rahul Kumar",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#F59E0B",
+    }, // Amber
+    {
+      image: "/teams/robotics/robotics5.jpg",
+      title: "Aditya Kumar Pandey",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#EF4444",
+    }, // Red
+    {
+      image: "/teams/robotics/robotics6.jpg",
+      title: "Himanshu Kumar Jha",
+      subtitle: "Head",
+      handle: "b22me027@nitm.ac.in",
+      borderColor: "#8B5CF6",
+    }, // Violet
+    {
+      image: "/teams/robotics/robotics7.jpeg",
+      title: "Debashish Nayak",
+      subtitle: "Head",
+      handle: "b22ec030@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/robotics/robotics8.jpeg",
+      title: "Sanapala Rahul",
+      subtitle: "Head",
+      handle: "b22ee010@nitm.ac.in",
+      borderColor: "#14B8A6",
+    }, // Teal
+    {
+      image: "/teams/robotics/robotics9.jpg",
+      title: "Rohit Aryan",
+      subtitle: "Head",
+      handle: "b22ee017@nitm.ac.in",
+      borderColor: "#F97316",
+    }, // Orange
+    {
+      image: "/teams/robotics/robotics10.jpg",
+      title: "Ankit Raj",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#06B6D4",
+    }, // Cyan
+    {
+      image: "/teams/robotics/robotics11.jpg",
+      title: "B Palguna Rao",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics12.jpg",
+      title: "Akash Shah",
+      subtitle: "Coordinator",
+      handle: "b23me008@nitm.ac.in",
+      borderColor: "#F59E0B",
+    }, // Amber
+    {
+      image: "/teams/robotics/robotics13.jpg",
+      title: "Sachin Chaurasia",
+      subtitle: "Coordinator",
+      handle: "b23ee010@nitm.ac.in",
+      borderColor: "#EF4444",
+    }, // Red
+    {
+      image: "/teams/robotics/robotics14.jpg",
+      title: "Vishnu Kumar",
+      subtitle: "Coordinator",
+      handle: "b23ee014@nitm.ac.in",
+      borderColor: "#8B5CF6",
+    }, // Violet
+    {
+      image: "/teams/robotics/robotics15.jpeg",
+      title: "Akshaj Sunil",
+      subtitle: "Coordinator",
+      handle: "b23me020@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/robotics/robotics16.png",
+      title: "Adharsh Barman",
+      subtitle: "Coordinator",
+      handle: "b23ee005@nitm.ac.in",
+      borderColor: "#14B8A6",
+    }, // Teal
+    {
+      image: "/teams/robotics/robotics17.webp",
+      title: "Saksham Singhania",
+      subtitle: "Coordinator",
+      handle: "b23ce026@nitm.ac.in",
+      borderColor: "#F97316",
+    }, // Orange
+    {
+      image: "/teams/robotics/robotics18.png",
+      title: "Rounak Prabhakar",
+      subtitle: "Coordinator)",
+      handle: "",
+      borderColor: "#06B6D4",
+    }, // Cyan
+    {
+      image: "/teams/robotics/robotics19.jpeg",
+      title: "Parag Das",
+      subtitle: "Coordinator",
+      handle: "b23ee013@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics20.png",
+      title: "Abhinav Hajong",
+      subtitle: "Coordinator",
+      handle: "b23ec006@nitm.ac.in",
+      borderColor: "#F59E0B",
+    }, // Amber
+    {
+      image: "/teams/robotics/robotics21.jpg",
+      title: "Aastha Mishra",
+      subtitle: "Coordinator",
+      handle: "b23me005@nitm.ac.in",
+      borderColor: "#EF4444",
+    }, // Red
+    {
+      image: "/teams/robotics/robotics22.jpg",
+      title: "Gaurav Kumar Singh",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#8B5CF6",
+    }, // Violet
+    {
+      image: "/teams/robotics/robotics23.JPG",
+      title: "Vignesh Patil",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/robotics/robotics24.jpg",
+      title: "Aman Kumar",
+      subtitle: "Coordinator",
+      handle: "b23cs038@nitm.ac.in",
+      borderColor: "#14B8A6",
+    }, // Teal
+    {
+      image: "/teams/robotics/robotics25.jpg",
+      title: "Pradip Kumar Mondal",
+      subtitle: "Coordinator",
+      handle: "b23ec034@nitm.ac.in",
+      borderColor: "#F97316",
+    },
+    {
+      image: "/teams/robotics/robotics26.jpg",
+      title: "Purushottam Thakur",
+      subtitle: "Coordinator",
+      handle: "b23cs014@nitm.ac.in",
+      borderColor: "#06B6D4",
+    }, // Cyan
+    {
+      image: "/teams/robotics/robotics27.jpg",
+      title: "Chinagudaba Nikhil",
+      subtitle: "Coordinator",
+      handle: "b23me027@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics28.jpg",
+      title: "Shreya Raj",
+      subtitle: "Member",
+      handle: "b24ce014@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics29.jpg",
+      title: "Ankita Singh",
+      subtitle: "Member",
+      handle: "b24cs018@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics30.jpg",
+      title: "Abhishek Jaiswal",
+      subtitle: "Member",
+      handle: "b24ee001@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics31.jpg",
+      title: "Bibhuti Mishra",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics32.jpg",
+      title: "Sonam Kumari",
+      subtitle: "Member",
+      handle: "b24cs047@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics33.jpg",
+      title: "Probhos Mandal",
+      subtitle: "Member",
+      handle: "b24ce010@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics34.jpeg",
+      title: "Sanjog Singh",
+      subtitle: "Member",
+      handle: "b24ec005@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics35.webp",
+      title: "Rahul Kumar",
+      subtitle: "Member",
+      handle: "b24ec023@nitm.ac.in",
+      borderColor: "#10B981",
+    },
+    {
+      image: "/teams/robotics/robotics36.JPG",
+      title: "Arnab Nandi",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics37.jpg",
+      title: "Md Kashif Iqbal",
+      subtitle: "Member",
+      handle: "b24ec007@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics38.jpg",
+      title: "Kunal Das",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics39.jpeg",
+      title: "Rahul Prasad",
+      subtitle: "Member",
+      handle: "b24ee004@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics40.jpg",
+      title: "Ayush Kumar",
+      subtitle: "Member",
+      handle: "b24me030@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics41.jpg",
+      title: "Akash Hajong",
+      subtitle: "Member",
+      handle: "b24me001@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics42.jpg",
+      title: "Rohit Das",
+      subtitle: "Member",
+      handle: "b24cs012@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics43.jpg",
+      title: "Anshu Mohit",
+      subtitle: "Member",
+      handle: "b24cs045@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics44.jpg",
+      title: "Divyashakti",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/robotics/robotics45.png",
+      title: "Bhabhisya Paudel",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#10B981",
+    }, // Emerald
+  ],
+  Coding: [
+    {
+      image: "/teams/coding/coding1.jpg",
+      title: "Karipireddy Surya Teja Gopal Reddy",
+      subtitle: "Convenor",
+      handle: "b22cs022@nitm.ac.in",
+      borderColor: "#F472B6",
+    }, // Pink
+    {
+      image: "/teams/coding/coding2.JPG",
+      title: "Chuncha Hemchand",
+      subtitle: "Co-Convenor",
+      handle: "b23cs020@nitm.ac.in",
+      borderColor: "#06B6D4",
+    }, // Cyan
+    {
+      image: "/teams/coding/coding3.jpeg",
+      title: "Mrinmoy Maji",
+      subtitle: "Head",
+      handle: "b22cs036@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/coding/coding4.jpeg",
+      title: "Manish Prasad Gupta",
+      subtitle: "Head",
+      handle: "b22cs007@nitm.ac.in",
+      borderColor: "#F59E0B",
+    }, // Amber
+    {
+      image: "/teams/coding/coding5.jpeg",
+      title: "Prem Kumar Gupta",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#EF4444",
+    }, // Red
+    {
+      image: "/teams/coding/coding6.jpg",
+      title: "T Vikram Rathod",
+      subtitle: "Head",
+      handle: "b22cs033@nitm.ac.in",
+      borderColor: "#8B5CF6",
+    }, // Violet
+    {
+      image: "/teams/coding/coding7.png",
+      title: "Satyajeet Rai",
+      subtitle: "Head",
+      handle: "b22ec021@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding8.png",
+      title: "Ankit Raj",
+      subtitle: "Co-ordinator",
+      handle: "b23ec012@nitm.ac.in",
+      borderColor: "#F97316",
+    }, // Orange
+    {
+      image: "/teams/coding/coding9.png",
+      title: "Abhay Kumar",
+      subtitle: "Co-ordinator",
+      handle: "b23ec022@nitm.ac.in",
+      borderColor: "#06B6D4",
+    }, // Cyan
+    {
+      image: "/teams/coding/coding10.jpg",
+      title: "Austin Joel Dympep",
+      subtitle: "Co-ordinator",
+      handle: "b23cs035@nitm.ac.in",
+      borderColor: "#10B981",
+    }, // Emerald
+    {
+      image: "/teams/coding/coding11.jpg",
+      title: "Arunoday Tiwari",
+      subtitle: "Co-ordinator",
+      handle: "b23ec009@nitm.ac.in",
+      borderColor: "#F59E0B",
+    }, // Amber
+    {
+      image: "/teams/coding/coding12.jpg",
+      title: "Shashank Umar Vaishy",
+      subtitle: "Co-ordinator",
+      handle: "b23cs019@nitm.ac.in",
+      borderColor: "#EF4444",
+    }, // Red
+    {
+      image: "/teams/coding/coding13.jpg",
+      title: "Charity Rymbai",
+      subtitle: "Co-ordinator",
+      handle: "b23me010@nitm.ac.in",
+      borderColor: "#8B5CF6",
+    }, // Violet
+    {
+      image: "/teams/coding/coding14.png",
+      title: "Aryan Raj",
+      subtitle: "Co-ordinator",
+      handle: "b23ec042@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding15.jpeg",
+      title: "Khushi Kumari",
+      subtitle: "Co-ordinator",
+      handle: "b23ec008@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding16.png",
+      title: "Jishnu Duhan",
+      subtitle: "Co-ordinator",
+      handle: "b23cs037@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding17.jpeg",
+      title: "Ayush Kumar Singh",
+      subtitle: "Co-ordinator",
+      handle: "b23ec003@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding18.jpg",
+      title: "Rohit Das",
+      subtitle: "Member",
+      handle: "b24cs012@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding19.png",
+      title: "Rishab Mankotia Synjri",
+      subtitle: "Member",
+      handle: "b24cs006@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding20.jpeg",
+      title: "Shaik Thanveer",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding21.jpeg",
+      title: "Kurva Hemanth",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding22.jpg",
+      title: "Sonam Kumari",
+      subtitle: "Member",
+      handle: "b24cs047@gmail.com",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding23.jpeg",
+      title: "Mohit Kumar",
+      subtitle: "Member",
+      handle: "b23ec003@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding24.jpeg",
+      title: "Avishek Sah",
+      subtitle: "Member",
+      handle: "b24cs031@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding25.jpg",
+      title: "Kunjana Panthy",
+      subtitle: "Member",
+      handle: "b24cs036@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding26.jpg",
+      title: "Kunal",
+      subtitle: "Member",
+      handle: "b24cs020@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding27.jpeg",
+      title: "Pasupureddy Shyameswar",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding28.jpeg",
+      title: "Prathipati Dhanush",
+      subtitle: "Member",
+      handle: "b24cs048@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding29.png",
+      title: "Rahul Das",
+      subtitle: "Member",
+      handle: "b24cs044@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding30.jpeg",
+      title: "Nathaniel Kharsynniang",
+      subtitle: "Member",
+      handle: "b24cs027@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding31.jpg",
+      title: "Rhythm Bhetwal",
+      subtitle: "Member",
+      handle: "b24cs038@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding32.jpeg",
+      title: "Akash Malaker",
+      subtitle: "Member",
+      handle: "b24cs042@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding32.jpg",
+      title: "Dharavath Drushyanth",
+      subtitle: "Member",
+      handle: "b24cs026@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/coding/coding33.jpg",
+      title: "Anshu Mohit",
+      subtitle: "Member",
+      handle: "b24cs045@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+  ],
+  "Task Force Club": [
+    {
+      image: "/teams/taskforce/taskforce1.jpg",
+      title: "Jitta Chandra Sekhar",
+      subtitle: "Convenor",
+      handle: "b23me045@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/taskforce/taskforce2.jpg",
+      title: "Podugu Ashrith",
+      subtitle: "Convenor",
+      handle: "b23ec045@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/taskforce/taskforce3.jpg",
+      title: "Charagundla Sai Laxman",
+      subtitle: "Head",
+      handle: "b24cs045@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/taskforce/taskforce4.jpg",
+      title: "Gourav Kumar",
+      subtitle: "Co-ordinator",
+      handle: "b23me018@nitm.ac.in",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/taskforce/taskforce5.jpg",
+      title: "Nishu Lamba",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#EC4899",
+    }, // Pink
+    {
+      image: "/teams/taskforce/taskforce6.jpg",
+      title: "Adittya Kumar Thakur",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#EC4899",
+    }, // Pink
+  ],
+  "Dance & Drama": [
+    {
+      image: "/teams/dance/dance1.jpg",
+      title: "Sravani",
+      subtitle: "Convenor",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/dance/dance2.jpg",
+      title: "B Palguna Rao",
+      subtitle: "Convenor",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/dance/dance3.jpg",
+      title: "T Sanjana",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/dance/dance4.jpg",
+      title: "M Sreekar Prasad",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+  ],
+  "Photography and fine arts": [
+    {
+      image: "/teams/art/art1.png",
+      title: "Satyam Singh",
+      subtitle: "Convenor",
+      handle: "b23ce020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/art/art2.jpeg",
+      title: "Md. Syed Ashraf Rafi",
+      subtitle: "Convenor",
+      handle: "b23ec001@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/art/art3.jpg",
+      title: "Aditya Tripathi",
+      subtitle: "Member",
+      handle: "b24ce028@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/art/art4.png",
+      title: "Harish Meena",
+      subtitle: "Member",
+      handle: "b24ce027@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
+  "E-Cell": [
+    {
+      image: "/teams/ecell/ecell1.jpeg",
+      title: "Swarnim Suman",
+      subtitle: "Convenor",
+      handle: "b24cs046@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/ecell/ecell2.jpg",
+      title: "Nazia Sheikh",
+      subtitle: "Coordinator",
+      handle: "b23ce029@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/ecell/ecell3.jpeg",
+      title: "Anjali",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/ecell/ecell4.jpg",
+      title: "Ledonki Bevan Laloo",
+      subtitle: "Coordinator",
+      handle: "b23me030@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/ecell/ecell5.jpeg",
+      title: "Alfred L. Pautu",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/ecell/ecell6.jpeg",
+      title: "Abhay Mishra",
+      subtitle: "Member",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/ecell/ecell7.jpg",
+      title: "Akshith Reddy",
+      subtitle: "Member",
+      handle: "b24ec020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
+  "Energy and Sustainability Club": [
+    {
+      image: "/teams/energy/energy1.jpg",
+      title: "Md Shams Tabrez Ansari",
+      subtitle: "Convenor",
+      handle: "b22ee033@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy2.jpeg",
+      title: "Diya Silvana Ritchil",
+      subtitle: "Coordinator",
+      handle: "b22ee001@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy3.png",
+      title: "Imon Shahriar",
+      subtitle: "Coordinator",
+      handle: "b22ec001@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy4.jpg",
+      title: "Aman Mina",
+      subtitle: "Coordinator",
+      handle: "b23me031@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy5.jpg",
+      title: "Manish Kumar",
+      subtitle: "Coordinator",
+      handle: "b23ce017@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy6.jpeg",
+      title: "Swarnim Suman",
+      subtitle: "Member",
+      handle: "b24cs046@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy7.jpeg",
+      title: "Sanjog Singh",
+      subtitle: "Member",
+      handle: "b24ec005@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy9.jpg",
+      title: "Ayush Kumar",
+      subtitle: "Member",
+      handle: "b24me030@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/energy/energy8.webp",
+      title: "Rahul Kumar",
+      subtitle: "Member",
+      handle: "b24ec023@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
+  "Design Club": [
+    {
+      image: "/teams/design/design1.png",
+      title: "Satyam Singh",
+      subtitle: "Convenor",
+      handle: "b23ce020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/design/design2.jpg",
+      title: "Nazia Hasan Sheikh",
+      subtitle: "Convenor",
+      handle: "b23ce029@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/design/design3.jpeg",
+      title: "Poulomi Das",
+      subtitle: "Member",
+      handle: "b24me004@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/design/design4.jpg",
+      title: "Bhawani Shankar",
+      subtitle: "Member",
+      handle: "b24ee020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
+  "Astronomy Club": [
+    {
+      image: "/teams/astronomy/astronomy1.jpg",
+      title: "Ujjawal Jhajharia",
+      subtitle: "Convenor",
+      handle: "b22ee007@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/astronomy/astronomy2.png",
+      title: "Rounak Saha",
+      subtitle: "Convenor",
+      handle: "b22cs008@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/astronomy/astronomy3.jpg",
+      title: "Vishnu Kumar",
+      subtitle: "Coordinator",
+      handle: "b23ee014@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
+  Departmental: [
+    {
+      image: "/teams/departmental/departmental1.png",
+      title: "Rounak Saha",
+      subtitle: "Head(CSE)",
+      handle: "b22cs008@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental2.jpeg",
+      title: "Medagam Manikanta Reddy",
+      subtitle: "Head(ECE)",
+      handle: "b22ec013@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental3.jpg",
+      title: "Mayank Mishra",
+      subtitle: "Head(EEE)",
+      handle: "b22ee030@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental4.jpeg",
+      title: "Tinku Debbarma",
+      subtitle: "Head(EEE)",
+      handle: "b22ee020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental5.jpg",
+      title: "Manisha Kumari",
+      subtitle: "Head(ME)",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental6.jpg",
+      title: "Saismruti sabat",
+      subtitle: "Head(Math)",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental7.JPG",
+      title: "Shivam Thakur",
+      subtitle: "Coordinator(CSE)",
+      handle: "b23cs021@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental8.jpg",
+      title: "Pradip Kumar Mondal",
+      subtitle: "Coordinator(ECE)",
+      handle: "b23ec034@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental9.jpg",
+      title: "Saurav Kumar(ECE)",
+      subtitle: "Coordinator",
+      handle: "b23ec040@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental10.jpg",
+      title: "Surabani Rani",
+      subtitle: "Coordinator(EE)",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental11.png",
+      title: "Abhishek Kumar Chauhan",
+      subtitle: "Coordinator(ME)",
+      handle: "b23me026@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental12.jpg",
+      title: "John Nelvidson Marwein",
+      subtitle: "Coordinator(ME)",
+      handle: "b23me025@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental13.png",
+      title: "Satyam Singh",
+      subtitle: "Coordinator(CE)",
+      handle: "b23ce020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental14.jpg",
+      title: "Nazia Hasan Sheikh(CE)",
+      subtitle: "Coordinator",
+      handle: "b23ce029@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental15.jpg",
+      title: "Md Kashif",
+      subtitle: "Member(ECE)",
+      handle: "b24ec007@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/departmental/departmental16.jpg",
+      title: "DEISICA MARBANIANG",
+      subtitle: "Member(CE)",
+      handle: "b23ce008@nitm.ac.in",
+      borderColor: "#EC4899",
     },
   ],
   Design: [
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FParuvada%20Dhanunjay%20Naidu.6d734555.png&w=2048&q=75",
-      title: "P Dhanunjay",
-      subtitle: "Convener",
-      handle: "@rahul",
-      borderColor: "#8B5CF6", // Violet
-    },
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSUBHADEEP%20SINHA.cf90fae3.jpg&w=2048&q=75",
-      title: "Shubhadeep Sinha",
-      subtitle: "Convener",
-      handle: "@rahul",
-      borderColor: "#EC4899", // Pink
-    },
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBotu%20Varun%20Kumar.463a0242.jpg&w=2048&q=75",
+      image: "/teams/designteam/designteam1.jpg",
       title: "Botu Varun",
-      subtitle: "Co-ordinator",
-      handle: "@rahul",
-      borderColor: "#10B981", // Emerald
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FM%20Manikanta%20Reddy.08b20815.jpg&w=2048&q=75",
-      title: "M. Manikanta Reddy",
-      subtitle: "Co-ordinator",
-      handle: "@rahul",
-      borderColor: "#F59E0B", // Amber
+      image: "/teams/designteam/designteam2.jpg",
+      title: "L Komune",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FKaripireddy%20Surya%20Teja%20Gopal%20Reddy.cb4779af.jpg&w=2048&q=75",
-      title: "K. Surya Teja Gopal Reddy",
-      subtitle: "Co-ordinator",
-      handle: "@rahul",
-      borderColor: "#06B6D4", // Cyan
+      image: "/teams/designteam/designteam3.jpg",
+      title: "Tiyangsen Lemtor",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPankaj%20Saraswat.ed1fdb92.jpg&w=2048&q=75",
-      title: "Pankaj Saraswat",
-      subtitle: "Co-ordinator",
-      handle: "@rahul",
-      borderColor: "#EF4444", // Red
+      image: "/teams/designteam/designteam4.jpg",
+      title: "Ritik Kumar",
+      subtitle: "Coordinator",
+      handle: "b23me014@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam5.png",
+      title: "Satyam Singh",
+      subtitle: "Coordinator",
+      handle: "b23ce020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam6.jpg",
+      title: "Priya Saha",
+      subtitle: "Member",
+      handle: "b24cs023@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam7.jpg",
+      title: "Bhawani Shankar",
+      subtitle: "Member",
+      handle: "b24ee020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam8.jpg",
+      title: "Probhas Mondal",
+      subtitle: "Member",
+      handle: "b24ce010@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam9.jpeg",
+      title: "Poulomi Das",
+      subtitle: "Member",
+      handle: "b24me004@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam10.jpg",
+      title: "Midasala Bhanu Vardhan Rao",
+      subtitle: "Member",
+      handle: "b24me022@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam11.jpg",
+      title: "Deepak",
+      subtitle: "Member",
+      handle: "b24ce007@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/designteam/designteam12.jpg",
+      title: "Md Kashif",
+      subtitle: "Member",
+      handle: "b24ec007@nitm.ac.in",
+      borderColor: "#EC4899",
     },
   ],
-  Marketing: [
+  Volunteer: [
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSupriya.37140f4c.jpg&w=2048&q=75",
-      title: "Supriya Neogi",
-      subtitle: "Co-ordinator(Sponsor & Marketing)",
-      handle: "@ananya",
-      borderColor: "#06B6D4", // Cyan
+      image: "/teams/volunteer/volunteer1.jpeg",
+      title: "Debashish Nayak",
+      subtitle: "Head",
+      handle: "b22ec030@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAvinash%20Renukunta.2845fb31.jpeg&w=2048&q=75",
-      title: "Avinash Renukunta",
-      subtitle: "Co-ordinator(Sponsor & Marketing)",
-      handle: "@ananya",
-      borderColor: "#10B981", // Emerald
+      image: "/teams/volunteer/volunteer2.jpg",
+      title: "Kurra Nandini",
+      subtitle: "Coordinator",
+      handle: "b23ec018@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-      title: "Yongdo Sangma",
-      subtitle: "Co-ordinator(Sponsor & Marketing)",
-      handle: "@ananya",
-      borderColor: "#F59E0B", // Amber
+      image: "/teams/volunteer/volunteer3.png",
+      title: "Abhinav Hajong",
+      subtitle: "Coordinator",
+      handle: "b23ec006@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FProtiksha%20Hajong.804347a4.jpg&w=2048&q=75",
-      title: "Protiksha Hajong",
-      subtitle: "Co-ordinator(Publicity & Social Media)",
-      handle: "@ananya",
-      borderColor: "#EF4444", // Red
+      image: "/teams/volunteer/volunteer4.jpeg",
+      title: "Dai",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSaket%20Pratap%20Singh.f1de8960.jpeg&w=2048&q=75",
-      title: "Saket Pratap Singh",
-      subtitle: "Co-ordinator(Publicity & Social Media)",
-      handle: "@ananya",
-      borderColor: "#8B5CF6", // Violet
+      image: "/teams/volunteer/volunteer5.jpeg",
+      title: "Valluri Venkata Mohan",
+      subtitle: "Coordinator",
+      handle: "",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FB.%20Vedant.3f7fa829.jpg&w=2048&q=75",
-      title: "B Vedant",
-      subtitle: "Co-ordinator(Sponsor & Marketing)",
-      handle: "@ananya",
-      borderColor: "#EC4899", // Pink
+      image: "/teams/volunteer/volunteer6.jpg",
+      title: "Deepak",
+      subtitle: "Member",
+      handle: "b24ce007@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBadurgari%20Rasool.2b6ce211.jpeg&w=2048&q=75",
-      title: "S. Badurgari Rasool",
-      subtitle: "Co-ordinator(Publicity & Social Media)",
-      handle: "@ananya",
-      borderColor: "#14B8A6", // Teal
+      image: "/teams/volunteer/volunteer7.jpg",
+      title: "Bhawani Shankar",
+      subtitle: "Member",
+      handle: "b24ee020@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FVenu%20Gopala%20Krishna.d8460ddc.jpeg&w=2048&q=75",
-      title: "Venu Gopala Krishna",
-      subtitle: "Co-ordinator(Publicity & Social Media)",
-      handle: "@ananya",
-      borderColor: "#F97316", // Orange
+      image: "/teams/volunteer/volunteer8.jpg",
+      title: "Aman Kumar Jaiswal",
+      subtitle: "Member",
+      handle: "b24ee029@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FApratim%20Chatterjee.48773f06.jpg&w=2048&q=75",
-      title: "Apratim Chatterjee",
-      subtitle: "Member(Sponsor & Marketing)",
-      handle: "@ananya",
-      borderColor: "#8B5CF6", // Violet
+      image: "/teams/volunteer/volunteer9.jpg",
+      title: "Shreya Raj",
+      subtitle: "Member",
+      handle: "b24ce014@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAlympa%20Deka.21fdbdc7.webp&w=2048&q=75",
-      title: "Alympa Deka",
-      subtitle: "Member(Sponsor & Marketing)",
-      handle: "@ananya",
-      borderColor: "#EC4899", // Pink
+      image: "/teams/volunteer/volunteer10.jpg",
+      title: "Amit Kuri",
+      subtitle: "Member",
+      handle: "b24me029@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSubrata%20Das.c4d8d2b5.jpeg&w=2048&q=75",
-      title: "Subrata Das",
-      subtitle: "Member(Sponsor & Marketing)",
-      handle: "@ananya",
-      borderColor: "#10B981", // Emerald
+      image: "/teams/volunteer/volunteer11.jpeg",
+      title: "Sumit Kumar",
+      subtitle: "Member",
+      handle: "b24cs049@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FIMG_20240906_172322_790%20-%20Sachin%20Chaurasia.612f40f3.jpg&w=2048&q=75",
-      title: "Sachin Chaurasia",
-      subtitle: "Member(Publicity & Social Media)",
-      handle: "@ananya",
-      borderColor: "#F59E0B", // Amber
+      image: "/teams/volunteer/volunteer12.jpeg",
+      title: "Nathaniel Kharsynniang",
+      subtitle: "Member",
+      handle: "b24cs027@nitm.ac.in",
+      borderColor: "#EC4899",
     },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage%20-%20Bekkam%20Manohar%20Sai.4b06376d.jpg&w=2048&q=75",
-      title: "Bekkam Manohar Sai",
-      subtitle: "Member(Publicity & Social Media)",
-      handle: "@ananya",
-      borderColor: "#EF4444", // Red
+      image: "/teams/volunteer/volunteer13.png",
+      title: "Aditya Kumar Thakur",
+      subtitle: "Member",
+      handle: "b24ec035@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
+  Gaming: [
+    {
+      image: "/teams/gaming/gaming1.jpg",
+      title: "Ankit Raj",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/gaming/gaming2.jpg",
+      title: "Rohit Aryan",
+      subtitle: "Head",
+      handle: "b22ee017@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/gaming/gaming3.jpg",
+      title: "Ledonki Bevan Laloo ",
+      subtitle: "Co-Coordinator",
+      handle: "b23me030@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/gaming/gaming4.png",
+      title: "Abhinav Hajong",
+      subtitle: "Co-Coordinator",
+      handle: "b23ec006@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/gaming/gaming5.jpg",
+      title: "Aibansansame Kharbanni",
+      subtitle: "Co-Coordinator",
+      handle: "b23cs024@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/gaming/gaming6.jpg",
+      title: "Amit Kuri",
+      subtitle: "Member",
+      handle: "b24me029@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/gaming/gaming7.jpg",
+      title: "Rohit Das",
+      subtitle: "Member",
+      handle: " b24cs012@nitm.ac.in",
+      borderColor: "#EC4899",
     },
   ],
   Management: [
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%209.c98d5d6a.png&w=2048&q=75",
-      title: "Kabesa S Marak",
-      subtitle: "Co-ordinator(Hospitality)",
-      handle: "@rohit",
-      borderColor: "#F472B6",
-    }, // Pink
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-      title: "Rahul Deb Rai",
-      subtitle: "Co-ordinator(Hospitality)",
-      handle: "@rohit",
-      borderColor: "#06B6D4",
-    }, // Cyan
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FVanyza%20Lyngshiang.6a540117.jpg&w=2048&q=75",
-      title: "Vanyza Lyngshiang",
-      subtitle: "Co-ordinator(Hospitality)",
-      handle: "@rohit",
-      borderColor: "#10B981",
-    }, // Emerald
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FIbanylla%20M%20Maring.3f20fb74.jpg&w=2048&q=75",
-      title: "Ibanylla M Maring",
-      subtitle: "Member-1(Hospitality)",
-      handle: "@rohit",
-      borderColor: "#F59E0B",
-    }, // Amber
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FKurra%20Nandini.a2eba5aa.jpg&w=2048&q=75",
-      title: "Kurra Nandini",
-      subtitle: "Member-2(Hospitality)",
-      handle: "@rohit",
-      borderColor: "#EF4444",
-    }, // Red
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-      title: "Nimmakuri Varun Teja",
-      subtitle: "Co-ordinator(Food Committee)",
-      handle: "@rohit",
-      borderColor: "#8B5CF6",
-    }, // Violet
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FD%20Bhuvanesh.b98e6794.jpeg&w=2048&q=75",
-      title: "D Bhuvanesh",
-      subtitle: "Co-ordinator(Food Committee)",
-      handle: "@rohit",
+      image: "/teams/management/management1.jpeg",
+      title: "B Vedant",
+      subtitle: "Head(Stage Management)",
+      handle: "b22ee012@nitm.ac.in",
       borderColor: "#EC4899",
-    }, // Pink
+    },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDola%20Raghu.21f9192c.jpg&w=2048&q=75",
-      title: "Dola Raghu",
-      subtitle: "Member-1(Food Committee)",
-      handle: "@rohit",
-      borderColor: "#14B8A6",
-    }, // Teal
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FShivam%20Kumar%20Manglam.143e0034.jpg&w=2048&q=75",
-      title: "Shivam Kumar Manglam",
-      subtitle: "Member-2(Food Committee)",
-      handle: "@rohit",
-      borderColor: "#F97316",
-    }, // Orange
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSojib%20Datta.0af14cf4.jpg&w=2048&q=75",
-      title: "Sojib Datta",
-      subtitle: "Co-ordinator(Stage Management)",
-      handle: "@rohit",
-      borderColor: "#06B6D4",
-    }, // Cyan
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-      title: "Penugurthi Dinesh",
-      subtitle: "Co-ordinator(Stage Management)",
-      handle: "@rohit",
-      borderColor: "#10B981",
-    }, // Emerald
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FManish%20Bishnoi.f9a6bd3b.jpg&w=2048&q=75",
-      title: "Manish Bishnoi",
-      subtitle: "C-oordinator(Stage Management)",
-      handle: "@rohit",
-      borderColor: "#F59E0B",
-    }, // Amber
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FB%20Palguna%20Rao.f52d054e.jpg&w=2048&q=75",
-      title: "B Palguna Rao",
-      subtitle: "Co-ordinator(Stage Management)",
-      handle: "@rohit",
-      borderColor: "#EF4444",
-    }, // Red
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMushfique%20Ahmed.f2ecbb33.jpg&w=2048&q=75",
-      title: "Mushfique Ahmed",
-      subtitle: "Co-ordinator(Stage Management)",
-      handle: "@rohit",
-      borderColor: "#8B5CF6",
-    }, // Violet
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSyed%20Ashraf%20Rafi.5220e096.png&w=2048&q=75",
-      title: "Syed Ashraf Rafi",
-      subtitle: "Member-1(Stage Management)",
-      handle: "@rohit",
+      image: "/teams/management/management2.jpg",
+      title: "Bojha Jaswanth",
+      subtitle: "Head(Event Management)",
+      handle: "b22me007@nitm.ac.in",
       borderColor: "#EC4899",
-    }, // Pink
+    },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPODUGU%20ASHRITH.56eae589.jpg&w=2048&q=75",
-      title: "Podugu Ashrith",
-      subtitle: "Member-2(Stage Management)",
-      handle: "@rohit",
-      borderColor: "#14B8A6",
-    }, // Teal
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%209.c98d5d6a.png&w=2048&q=75",
-      title: "Vasundhra Singh",
-      subtitle: "Co-ordinator(Event Management)",
-      handle: "@rohit",
-      borderColor: "#F97316",
-    }, // Orange
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-      title: "Abhishek",
-      subtitle: "Co-ordinator(Event Management)",
-      handle: "@rohit",
-      borderColor: "#06B6D4",
-    }, // Cyan
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%209.c98d5d6a.png&w=2048&q=75",
-      title: "Minakshi",
-      subtitle: "Co-ordinator(Event Management)",
-      handle: "@rohit",
-      borderColor: "#10B981",
-    }, // Emerald
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FRakesh%20Thumu.578e97e5.jpg&w=2048&q=75",
-      title: "Rakesh Thumu",
-      subtitle: "Coordinator(Event Management)",
-      handle: "@rohit",
-      borderColor: "#F59E0B",
-    }, // Amber
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-      title: "Rahul Kumar",
-      subtitle: "Coordinator(Event Management)",
-      handle: "@rohit",
-      borderColor: "#EF4444",
-    }, // Red
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYashvi%20Arya.1ffff33f.jpg&w=2048&q=75",
-      title: "Yashvi Arya",
-      subtitle: "Member-1(Event Management)",
-      handle: "@rohit",
-      borderColor: "#8B5CF6",
-    }, // Violet
-    {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FNazia%20Sheikh.104c4ed2.jpg&w=2048&q=75",
-      title: "Nazia Sheikh",
-      subtitle: "Member-2(Event Management)",
-      handle: "@rohit",
+      image: "/teams/management/management3.jpg",
+      title: "Sheikh Nabeel",
+      subtitle: "Head(Event Management)",
+      handle: "",
       borderColor: "#EC4899",
-    }, // Pink
+    },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-      title: "Varsha",
-      subtitle: "Co-ordinator (Public Relations)",
-      handle: "@rohit",
-      borderColor: "#14B8A6",
-    }, // Teal
+      image: "/teams/management/management4.jpg",
+      title: "Winson Suchiang",
+      subtitle: "Head(Public Relations)",
+      handle: "b22ec006@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMadhulika.c749b440.jpeg&w=2048&q=75",
-      title: "Madhulika",
-      subtitle: "Co-ordinator(Public Relations)",
-      handle: "@rohit",
-      borderColor: "#F97316",
-    }, 
+      image: "/teams/management/management5.jpg",
+      title: "Aman Mina",
+      subtitle: "Co-Coordinator(Stage Management)",
+      handle: "b23me031@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSaloni%20Singh.5ab63877.jpg&w=2048&q=75",
-      title: "Saloni Singh",
-      subtitle: "Member-1(Public Relations)",
-      handle: "@rohit",
-      borderColor: "#06B6D4",
-    }, // Cyan
+      image: "/teams/management/management6.jpg",
+      title: "Nazia Hasan Sheikh",
+      subtitle: "Co-Coordinator(Stage Management)",
+      handle: "b23ce029@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
     {
-      image:
-        "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBinnada%20yamuna.47978fd3.jpg&w=2048&q=75",
-      title: "Binnada Yamuna",
-      subtitle: "Member-2(Public Relations)",
-      handle: "@rohit",
-      borderColor: "#10B981",
-    }, // Emerald
+      image: "/teams/management/management4.jpg",
+      title: "",
+      subtitle: "Co-Coordinator(Public Relations)",
+      handle: "b22ec006@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management7.jpg",
+      title: "Saurav Kumar",
+      subtitle: "Co-Coordinator(Event Management)",
+      handle: "b23ec040@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management8.jpg",
+      title: "Bandla venkata Bharath chandra",
+      subtitle: "Co-Coordinator(Event Management)",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management8.jpg",
+      title: "Purushottam Thakur",
+      subtitle: "Co-Coordinator(Event Management)",
+      handle: "b23cs014@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management9.jpg",
+      title: "Manish Kumar",
+      subtitle: "Co-Coordinator(Public Relations)",
+      handle: "b23ce017@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management10.jpg",
+      title: "Kunal",
+      subtitle: "Member(Stage Management)",
+      handle: "b24cs020@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management11.jpeg",
+      title: "Sumit Kumar",
+      subtitle: "Member(Stage Management)",
+      handle: "b24cs049@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management12.jpg",
+      title: "Amit Kumar",
+      subtitle: "Member(Event Management)",
+      handle: "b24ee025@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/management/management13.jpg",
+      title: "Shreyas Sharma",
+      subtitle: "Member(Public Relations)",
+      handle: "",
+      borderColor: "#EC4899",
+    },
   ],
-  Robotics: [
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Sourabh Paul", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F472B6" }, // Pink
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Sachin Paul", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#06B6D4" }, // Cyan
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Parthiv Das", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#10B981" }, // Emerald
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Narendra Kumar", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F59E0B" }, // Amber
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fameya_patil.d5b74d11.jpg&w=2048&q=75",
-    title: "Ameya Patil", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EF4444" }, // Red
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnirupan_jagnekar.5a4d0e45.jpg&w=2048&q=75",
-    title: "Nirupan Jagnekar", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#8B5CF6" }, // Violet
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Ankit Singh", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EC4899" }, // Pink
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Avinash Kumar Singh", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#14B8A6" }, // Teal
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Ashvil Nagar", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F97316" }, // Orange
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Rahul Kumar", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#06B6D4" }, // Cyan
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbadurgari_rasool.2b6ce211.jpeg&w=2048&q=75",
-    title: "Badurgari Rasool", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#10B981" }, // Emerald
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Aditya Kumar Pandey", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F59E0B" }, // Amber
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fchandrani_dalui.bc4db21e.jpg&w=2048&q=75",
-    title: "Chandrani Dalui", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EF4444" }, // Red
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fankit_raj.8d50fe9d.jpg&w=2048&q=75",
-    title: "Ankit Raj", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#8B5CF6" }, // Violet
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Rohit Aryan", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EC4899" }, // Pink
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fshivam%20kumar%203Y.38be9183.jpg&w=2048&q=75",
-    title: "Shivam Kumar", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#14B8A6" }, // Teal
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhimanshu_kumar_jha.b3f9e788.jpg&w=2048&q=75",
-    title: "Himanshu Kumar Jha", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F97316" }, // Orange
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsumit_kumar.0bc5dae6.jpg&w=2048&q=75",
-    title: "Sumit Kumar", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#06B6D4" }, // Cyan
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fangshuman_dey.099cec06.jpg&w=2048&q=75",
-    title: "Angshuman Dey", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#10B981" }, // Emerald
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fneelkantha_mandal.a47789e0.jpg&w=2048&q=75",
-    title: "Neelkantha Mandal", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F59E0B" }, // Amber
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Sanapala Rahul", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EF4444" }, // Red
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpranav_kumar_dubey.35819e56.jpg&w=2048&q=75",
-    title: "Pranav Kumar Dubey", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#8B5CF6" }, // Violet
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpankaj_saraswat.5592b951.jpg&w=2048&q=75",
-    title: "Pankaj Saraswat", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EC4899" }, // Pink
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Ashirbad Raj Arya", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#14B8A6" }, // Teal
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdebashish_nayak.65774824.jpeg&w=2048&q=75",
-    title: "Debashish Nayak", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F97316" }, // Orange
-],
-Coding: [
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Raj Kedia", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F472B6" }, // Pink
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Anshu Das", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#06B6D4" }, // Cyan
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%209.c98d5d6a.png&w=2048&q=75",
-    title: "Shubhavi Kukreja", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#10B981" }, // Emerald
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Vasundhara Singh", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F59E0B" }, // Amber
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Roshan Kumar Sah", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EF4444" }, // Red
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FAvinash%20Renukunta.2845fb31.jpeg&w=2048&q=75",
-    title: "Avinash Renukunta", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#8B5CF6" }, // Violet
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSamiksha%20Deb.85730977.jpg&w=2048&q=75",
-    title: "Gunnu Lavanya", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EC4899" }, // Pink
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FManish.e8a91478.jpg&w=2048&q=75",
-    title: "Manish Prasad Gupta", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#14B8A6" }, // Teal
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FHriti%20Chakrabortty.dd2f7a39.jpg&w=2048&q=75",
-    title: "Hriti Chakrabortty", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F97316" }, // Orange
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Satyajeet Rai", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#06B6D4" }, // Cyan
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSiddhant%20Purkayastha.f0366cae.jpg&w=2048&q=75",
-    title: "Siddhant Purkayastha", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#10B981" }, // Emerald
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Karipireddy Surya Teja", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#F59E0B" }, // Amber
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Ritabrata Pal", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EF4444" }, // Red
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGaurav.140cc4c6.png&w=2048&q=75",
-    title: "Gaurav Joshi", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#8B5CF6" }, // Violet
-  { image: "https://cognitia.nitm.ac.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdownload%208.30e4510e.png&w=2048&q=75",
-    title: "Rounak Saha", subtitle: "Co-ordinator", handle: "@rohit", borderColor: "#EC4899" }, // Pink
-]
+  Hospitality: [
+    {
+      image: "/teams/hospitality/hospitality1.jpg",
+      title: "Vanyza Lyngshiang",
+      subtitle: "Head",
+      handle: "b22ee008@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/hospitality/hospitality2.png",
+      title: "Abhishek Kumar Chauhan",
+      subtitle: "Co-Coordinator",
+      handle: "b23me026@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/hospitality/hospitality3.jpg",
+      title: "Sanjeev Gupta",
+      subtitle: "Co-Coordinator",
+      handle: "b23me004@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/hospitality/hospitality4.jpeg",
+      title: "Nathaniel Kharsynniang",
+      subtitle: "Member",
+      handle: "b24cs027@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/hospitality/hospitality5.png",
+      title: "Aditya Kumar Thakur",
+      subtitle: "Member",
+      handle: "b24ec035@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
+  "Food Committee": [
+    {
+      image: "/teams/food/food1.jpg",
+      title: "Ashirbad Raj Arya",
+      subtitle: "Head",
+      handle: "b22ec009@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/food/food2.jpg",
+      title: "B Palguna Rao",
+      subtitle: "Head",
+      handle: "",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/food/food3.JPG",
+      title: "Kuldeep Chaudhary",
+      subtitle: "Coordinator",
+      handle: "b23ec019@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/food/food4.jpg",
+      title: "Ritik Kumar",
+      subtitle: "Coordinator",
+      handle: "b23me014@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/food/food5.jpg",
+      title: "Minalish Hajong",
+      subtitle: "Member",
+      handle: "b24ec011@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/food/food6.jpg",
+      title: "Aman Kumar Jaiswal",
+      subtitle: "Member",
+      handle: "b24ee029@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+  ],
 };
 
 export { navLinks, eventsData, events, teamData };
