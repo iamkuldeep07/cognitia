@@ -15,7 +15,7 @@ const Timeline = () => {
     {
       day: "9th April",
       events: [
-        "Official commencement of Cognitia 2024",
+        "Official commencement of Cognitia 2026",
         "Inauguration Ceremony at 2:00 PM",
       ],
     },
@@ -29,7 +29,7 @@ const Timeline = () => {
     },
     {
       day: "11th April",
-      events: ["Roborumble by the Robotics Club", "Jam Session"],
+      events: ["Roborumble by the Robotics Club", "Jam Session by DJ Kayara"],
     },
   ];
 

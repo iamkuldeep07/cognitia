@@ -10,6 +10,7 @@ import Merch from "./pages/Merch";
 import PopularEvent from "./pages/PopularEvents";
 import ScrollToTop from "./components/ScrollToTop";
 import EventDetails from "./pages/EventDetails";
+import Guest from "./components/Guest";
 
 const App = () => {
   return (
@@ -26,7 +27,9 @@ const App = () => {
               <>
                 <Hero />
                 <Timeline />
+                <Guest />
                 <PopularEvent />
+                <Footer />
               </>
             }
           />
@@ -39,8 +42,7 @@ const App = () => {
           <Route path="/events" element={<Event />} />
           <Route path="/events/:id" element={<EventDetails />} />
         </Routes>
-        </div>
-        <Footer />
+      </div>
     </Router>
   );
 };

@@ -4,7 +4,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ShaderGradientCanvas, ShaderGradient } from "@shadergradient/react";
 import DecoderMotion from "../components/DecoderMotion";
-import { ChevronDown } from "lucide-react"; // Icon for scroll down
+import { ChevronDown } from "lucide-react"; 
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -52,7 +52,6 @@ const Hero = () => {
           "-=0.5",
         );
 
-      // Scroll Down Icon Animation
       gsap.to(".scroll-down-icon", {
         y: 15,
         repeat: -1,
@@ -156,11 +155,9 @@ const Hero = () => {
           Get Started
         </button>
 
-        {/* Dynamic Glitch Taglines */}
         <DecoderMotion />
       </div>
 
-      {/* Scroll Down Icon */}
       <div className="absolute bottom-8 z-10 flex flex-col items-center">
         <p className="text-white/70 text-sm mb-2">Scroll Down</p>
         <ChevronDown className="scroll-down-icon text-cyan-400 w-8 h-8" />

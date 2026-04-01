@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaGoogle, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom"; // 👈 import Link
+import { FaGoogle, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +49,6 @@ const Footer = () => {
       className="relative w-full bg-black text-white border-t border-gray-800 overflow-hidden"
     >
       <div className="container mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-        {/* LEFT - NAV LINKS */}
         <div className="footer-links text-center lg:text-left">
           <ul className="space-y-3 text-lg">
             <li>
@@ -68,14 +67,13 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <a href="#report" className="hover:text-green-400 transition">
+              <a href="mailto:b23ec019@nitm.ac.in" className="hover:text-green-400 transition">
                 Report Bugs
               </a>
             </li>
           </ul>
         </div>
 
-        {/* CENTER - COGNITIA */}
         <div className="text-center">
           <h1
             ref={cognitiaRef}
@@ -88,7 +86,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* RIGHT - SOCIALS & ADDRESS */}
         <div className="footer-social text-center lg:text-right">
           <div className="flex justify-center lg:justify-end gap-6 mb-6">
             <a
@@ -100,7 +97,7 @@ const Footer = () => {
               <FaGoogle size={22} />
             </a>
             <a
-              href="https://www.instagram.com/yourpage"
+              href="https://www.instagram.com/cognitia_nitm"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-400 hover:scale-125 transition"
@@ -118,7 +115,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-800 py-5 text-center text-sm text-gray-500">
-        © 2026 COGNITIA. All rights reserved. | Built by Kuldeep Chaudhary
+        © 2026 COGNITIA. All rights reserved. | Built by Cognitia
       </div>
     </footer>
   );

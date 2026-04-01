@@ -7,32 +7,6 @@
   src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
 }
 
-/* PPNeueMontreal & PPEiko are DISABLED — the .woff2 files are corrupted.
-   OTS error: invalid sfntVersion means the binary data is broken, not the CSS.
-   To fix properly: re-export valid .woff2 files from the original .otf/.ttf
-   at https://www.fontsquirrel.com/tools/webfont-generator
-   
-   PPNeueMontreal (geometric sans, light) → replaced with Syne
-   PPEiko (editorial serif italic)        → replaced with DM Serif Text italic
-*/
-
-/*
-@font-face {
-  font-family: "PPNeueMontreal";
-  src: url("/src/assets/fonts/PPNeueMontreal-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PPEiko";
-  src: url("/src/assets/fonts/PPEiko-RegularItalic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-}
-*/
-
-/* ---------------------- Theme Variables ---------------------- */
 @theme {
   --color-yellow: #e7d393;
   --color-white-100: #efefef;
@@ -75,23 +49,6 @@ body {
   color: transparent;
 }
 
-/* ---------------------- Navbar ---------------------- */
-nav {
-  @apply fixed top-0 left-0 w-full z-50 transition-colors duration-500;
-}
-
-nav p {
-  @apply font-modern-negra text-3xl -mb-2;
-}
-
-nav a {
-  @apply cursor-pointer md:text-base text-sm transition-colors hover:text-cyan-400;
-}
-
-nav ul {
-  @apply flex-center lg:gap-12 gap-7;
-}
-
 /* ---------------------- Hero Section ---------------------- */
 #hero {
   @apply relative z-10 min-h-screen w-full flex flex-col justify-center items-center text-center;
@@ -99,12 +56,12 @@ nav ul {
 
 #hero h1 {
   @apply text-5xl sm:text-6xl md:text-7xl font-bold leading-tight;
-  font-family: "Syne", sans-serif; /* was PPNeueMontreal */
+  font-family: var(--font-pp-neue);
 }
 
 #hero p {
   @apply text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto;
-  font-family: "DM Serif Text", serif; /* was PPEiko */
+  font-family: var(--font-pp-eiko);
   font-style: italic;
 }
 
@@ -124,12 +81,12 @@ nav ul {
 
 #about h2 {
   @apply text-4xl sm:text-5xl md:text-6xl font-bold mb-6;
-  font-family: "Syne", sans-serif; /* was PPNeueMontreal */
+  font-family: var(--font-pp-neue);
 }
 
 #about p {
   @apply text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed;
-  font-family: "DM Serif Text", serif; /* was PPEiko */
+  font-family: var(--font-pp-eiko);
   font-style: italic;
 }
 

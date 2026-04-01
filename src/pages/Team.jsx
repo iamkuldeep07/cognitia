@@ -2,14 +2,31 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { teamData } from "../../constants";
+import Footer from "../components/Footer";
 
 const Team = () => {
   const tabOrder = [
-    "SAC", "Dev", "Core", "Sponsor and Marketing", "Publicity and Social Media",
-    "Robotics", "Coding", "Task Force Club", "Dance & Drama",
-    "Photography and fine arts", "E-Cell", "Energy and Sustainability Club",
-    "Design Club", "Astronomy Club", "Departmental", "Design", "Volunteer",
-    "Gaming", "Management", "Hospitality", "Food Committee"
+    "SAC",
+    "Dev",
+    "Core",
+    "Sponsor and Marketing",
+    "Publicity and Social Media",
+    "Robotics",
+    "Coding",
+    "Task Force Club",
+    "Dance & Drama",
+    "Photography and fine arts",
+    "E-Cell",
+    "Energy and Sustainability Club",
+    "Design Club",
+    "Astronomy Club",
+    "Departmental",
+    "Design",
+    "Volunteer",
+    "Gaming",
+    "Management",
+    "Hospitality",
+    "Food Committee",
   ];
 
   const [activeTab, setActiveTab] = useState(tabOrder[0]);
@@ -27,16 +44,15 @@ const Team = () => {
 
   return (
     <section className="relative min-h-screen w-full text-white flex flex-col items-center px-4 py-16 bg-[#021505]">
-
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
-
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold italic tracking-tighter">
             MEET THE <span className="text-green-400">TEAM</span>
           </h2>
           <p className="text-gray-300 mt-3 text-lg font-medium opacity-90 max-w-2xl mx-auto">
-            A special thanks to all the wonderful people who contributed to the event!
+            A special thanks to all the wonderful people who contributed to the
+            event!
           </p>
         </div>
 
@@ -103,8 +119,6 @@ const Team = () => {
                 }}
                 className="relative h-[420px] rounded-3xl overflow-hidden bg-black border border-white/10 cursor-pointer"
               >
-
-                {/* Image */}
                 <motion.img
                   src={member.image}
                   alt={member.title}
@@ -117,7 +131,6 @@ const Team = () => {
                   className="w-full h-full object-cover"
                 />
 
-                {/* Overlay (keep pointer-events-none here only) */}
                 <motion.div
                   variants={{
                     hover: { opacity: 1 },
@@ -125,7 +138,6 @@ const Team = () => {
                   className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none"
                 />
 
-                {/* Text (FIXED: removed pointer-events-none) */}
                 <motion.div
                   variants={{
                     hover: { y: 0 },
@@ -145,21 +157,14 @@ const Team = () => {
                     {member.title}
                   </motion.h3>
 
-                  <motion.div
-          
-            
-                  >
-                    <p className="text-gray-400 text-sm">
-                      {member.handle}
-                    </p>
+                  <motion.div>
+                    <p className="text-gray-400 text-sm">{member.handle}</p>
                   </motion.div>
                 </motion.div>
-
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
-
       </div>
     </section>
   );

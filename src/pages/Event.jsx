@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom"; 
 import { eventsData } from "../../constants";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -15,6 +15,7 @@ import {
   Wrench,
   Rocket,
 } from "lucide-react";
+import Footer from "../components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +33,20 @@ const Event = () => {
   const [activeTab, setActiveTab] = useState("Coding");
   const containerRef = useRef(null);
   const scrollerRef = useRef(null);
+  
   const navigate = useNavigate();
+  const location = useLocation(); 
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tabFromUrl = params.get("tab");
+    
+    
+    if (tabFromUrl && eventsData[tabFromUrl]) {
+      setActiveTab(tabFromUrl);
+    }
+  }, [location.search]);
+
 
   useEffect(() => {
     if (containerRef.current) {
@@ -46,6 +60,8 @@ const Event = () => {
 
   useEffect(() => {
     const el = scrollerRef.current;
+    if (!el) return;
+
     const tl = gsap.to(el, {
       xPercent: -50,
       duration: 20,
@@ -77,7 +93,6 @@ const Event = () => {
         className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden text-white"
         id="events"
       >
-        {/* Background */}
         <ShaderGradientCanvas
           style={{
             position: "absolute",
@@ -126,7 +141,6 @@ const Event = () => {
           />
         </ShaderGradientCanvas>
 
-        {/* Headline */}
         <div className="relative z-10 text-center px-6">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -146,8 +160,7 @@ const Event = () => {
           </motion.p>
         </div>
 
-        {/* Infinite Scroller */}
-        <div className="relative w-full overflow-hidden mt-20 z-10">
+        <div className="hidden md:block relative w-full overflow-hidden mt-20 z-10">
           <div
             ref={scrollerRef}
             className="flex gap-6 whitespace-nowrap w-[200%]"
@@ -169,7 +182,6 @@ const Event = () => {
           </div>
         </div>
 
-        {/* Bold Closing Text */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -184,24 +196,25 @@ const Event = () => {
         </motion.div>
       </section>
 
-      {/* Events Section */}
-      <section className="bg-black text-white py-20 px-8 md:px-16" id="all-events">
+      <section className="bg-black text-white py-16 md:py-20 px-4 sm:px-8 md:px-16" id="all-events">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl font-bold text-center mb-12"
+          className="text-4xl md:text-6xl font-bold text-center mb-10 md:mb-12"
         >
           Browse All Events
         </motion.h2>
 
-        {/* Tabs */}
-        <div className="flex justify-center space-x-8 mb-12">
+        <div className="flex md:justify-center gap-6 md:gap-8 mb-12 overflow-x-auto no-scrollbar pb-2 px-2 w-full snap-x">
           {Object.keys(eventsData).map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`pb-2 text-lg font-semibold ${
+              onClick={() => {
+                setActiveTab(tab);
+                navigate(`/events?tab=${tab}#all-events`, { replace: true });
+              }}
+              className={`pb-2 text-base md:text-lg font-semibold whitespace-nowrap snap-start transition-colors ${
                 activeTab === tab
                   ? "border-b-2 border-green-400 text-green-400"
                   : "text-gray-400 hover:text-green-300"
@@ -212,17 +225,16 @@ const Event = () => {
           ))}
         </div>
 
-        {/* Event Cards */}
         <div
           ref={containerRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
         >
-          {eventsData[activeTab].map((event, idx) => (
+          {eventsData[activeTab]?.map((event, idx) => (
             <motion.div
               key={idx}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-gray-800 hover:border-green-400"
+              className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-gray-800 hover:border-green-400 flex flex-col"
               onClick={() => navigate(`/events/${event.slug}`)}
             >
               <img
@@ -230,18 +242,21 @@ const Event = () => {
                 alt={event.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-5">
+              <div className="p-5 flex-grow">
                 <div className="flex items-center text-sm text-gray-400 mb-2">
                   <FaClock className="mr-2 text-green-400" /> {event.schedule}
                 </div>
                 <h3 className="text-xl font-bold">{event.title}</h3>
-                <p className="text-gray-400 mt-1">
-                  {event.desc.split(" ").slice(0, 30).join(" ")}
-                  {event.desc.split(" ").length > 50 && "..."}
+                <p className="text-gray-400 mt-2 text-sm md:text-base line-clamp-3">
+                  {event.desc}
                 </p>
               </div>
             </motion.div>
           ))}
+        </div>
+        
+        <div className="pt-8">
+          <Footer />
         </div>
       </section>
     </>

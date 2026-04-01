@@ -46,6 +46,7 @@ const EventDetails = () => {
         className="min-h-screen flex flex-col justify-center items-center text-center p-12"
       >
         <h2 className="text-3xl font-bold mb-4">Event Not Found</h2>
+
         <Link
           to="/events#all-events"
           className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 mb-8"
@@ -68,7 +69,7 @@ const EventDetails = () => {
         transition={{ duration: 0.6 }}
       >
         <Link
-          to="/events#all-events"
+          to={`/events?tab=${event.category}#all-events`}
           className="inline-flex items-center gap-2 text-red-400 hover:text-red-300 mb-8"
         >
           <ArrowLeft size={20} /> Back to Events
@@ -127,7 +128,7 @@ const EventDetails = () => {
         </motion.div>
       </motion.div>
 
-      {/* Modern Event Brochure Button */}
+      {/* Modern Event Rulebook Button */}
       {event.rulebookLink && (
         <div className="max-w-6xl mx-auto mt-16 fade-section flex justify-center">
           <motion.a
@@ -138,7 +139,6 @@ const EventDetails = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* Subtle glowing background on hover */}
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-red-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             <FileDown
@@ -149,7 +149,6 @@ const EventDetails = () => {
               View Rulebook
             </span>
 
-            {/* Animated bottom highlight edge */}
             <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
@@ -163,7 +162,7 @@ const EventDetails = () => {
             {event.contacts.map((c, i) => (
               <motion.div
                 key={i}
-                className="flex items-center  gap-4 p-5 bg-gray-800 rounded-xl border border-gray-700 shadow hover:scale-105 transition"
+                className="flex items-center gap-4 p-5 bg-gray-800 rounded-xl border border-gray-700 shadow hover:scale-105 transition"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}

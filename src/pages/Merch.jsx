@@ -1,17 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  ShoppingBag,
-  ExternalLink,
-  Tag,
-  Sparkles,
-  Zap,
-} from "lucide-react";
+import { ShoppingBag, ExternalLink, Zap } from "lucide-react";
 
 const merchItems = [
   {
     id: "tshirt",
-    name: "Cognitia 2K25 Official T-Shirt",
+    name: "Cognitia 2K26 Official T-Shirt",
     price: "₹399",
     features: [
       "Premium 100% Cotton Blend",
@@ -45,12 +39,10 @@ const Merch = () => {
   const googleFormLink = "https://forms.gle/YOUR_FORM_LINK_HERE";
 
   return (
-    <div className="min-h-screen bg-[#020202] text-white py-24 px-6 relative overflow-hidden flex flex-col items-center">
+    <section className="min-h-screen bg-[#020202] text-white py-24 px-6 relative overflow-hidden flex flex-col items-center">
 
-      {/* 🔥 GRID BACKGROUND */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00ffff0a_1px,transparent_1px),linear-gradient(to_bottom,#00ffff0a_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
-      {/* ⚡ GLOW ORBS */}
       <motion.div
         animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 8, repeat: Infinity }}
@@ -63,8 +55,6 @@ const Merch = () => {
       />
 
       <div className="max-w-7xl w-full relative z-10">
-
-        {/* 🔥 HEADER */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
             <Zap size={16} className="text-yellow-400" />
@@ -76,17 +66,16 @@ const Merch = () => {
           <h1 className="text-5xl md:text-7xl font-black mb-6">
             Gear Up For <br />
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Cognitia 2K25
+              Cognitia 2K26
             </span>
           </h1>
 
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Premium tech fest merch. Limited stock. Built for hackers,
-            builders & innovators.
+            Premium tech fest merch. Limited stock. Built for hackers, builders
+            & innovators.
           </p>
         </div>
 
-        {/* 🔥 PRODUCTS */}
         <div className="grid lg:grid-cols-2 gap-12 mb-24">
           {merchItems.map((item, index) => (
             <motion.div
@@ -97,16 +86,12 @@ const Merch = () => {
               transition={{ delay: index * 0.2 }}
               className="relative group rounded-3xl overflow-hidden"
             >
-              {/* ⚡ NEON BORDER */}
               <div className="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-40 group-hover:opacity-100 blur-sm"></div>
 
               <div className="relative bg-[#050505] rounded-3xl overflow-hidden">
-
-                {/* ⚡ SCANLINES */}
                 <div className="absolute inset-0 bg-[repeating-linear-gradient(transparent,transparent_2px,rgba(255,255,255,0.02)_3px)] pointer-events-none"></div>
 
                 <div className="flex flex-col md:flex-row">
-
                   {/* IMAGE */}
                   <div className="relative w-full md:w-2/5 h-72 overflow-hidden">
                     <motion.img
@@ -154,11 +139,8 @@ const Merch = () => {
           ))}
         </div>
 
-        {/* 🔥 CTA */}
         <div className="text-center">
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to claim your gear?
-          </h3>
+          <h3 className="text-3xl font-bold mb-4">Ready to claim your gear?</h3>
 
           <p className="text-gray-400 mb-10">
             Limited stock. Secure yours now.
@@ -172,16 +154,14 @@ const Merch = () => {
             className="relative inline-flex items-center gap-3 px-12 py-5 text-lg font-bold text-cyan-400 border border-cyan-400 rounded-full overflow-hidden group"
           >
             <span className="absolute inset-0 bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition"></span>
-
             <ShoppingBag size={22} />
             INITIATE PURCHASE
             <ExternalLink size={20} />
-
             <span className="absolute inset-0 rounded-full blur-xl bg-cyan-400/20 opacity-0 group-hover:opacity-100"></span>
           </motion.a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
