@@ -5,10 +5,10 @@ import { Briefcase, Mic, Award, Sparkles } from 'lucide-react';
 const guests = [
   {
     id: 1,
-    name: "Chandrasekhar N",
-    currentPost: "Executive Director & Head(R&D) Corporate Research & Development Centre Bharat Petroleum Corporation Limited",
+    name: "Dr. Bharat Newalkar",
+    currentPost: "Chief General Manager & HEAD (R&D) Corporate Research & Development Centre Bharat Petroleum Corporation Limited",
     eventRole: "Chief Guest",
-    image: "/Dr-Chandershekhar.jpg",
+    image: "/bharatnewalkar.jpeg",
     color: "from-cyan-400 to-blue-500"
   },
   {
