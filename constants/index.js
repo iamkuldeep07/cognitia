@@ -16,7 +16,7 @@ const events = [
     desc: "Get ready for an adrenaline-filled coding marathon with our Hackathon, where creativity meets technology! This is your chance to transform innovative ideas into real-world solutions within a limited time frame.Participants will collaborate in teams to brainstorm, design, and develop projects that tackle real-life problems. Whether it’s web development, AI, IoT, or app building — this hackathon is all about pushing boundaries and bringing ideas to life.",
     prize: "Exciting Prizes",
     venue: "CS Lab, A Block",
-    schedule: "9th April 2026 – 11th April 2026",
+    schedule: "4th April 2026",
     contacts: [
       "Prem Kumar Gupta - b22cs026@nitm.ac.in",
       "Shashank Umar Vaishy - b23cs019@nitm.ac.in",
