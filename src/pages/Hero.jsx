@@ -125,7 +125,7 @@ const Hero = () => {
           className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-wide"
           style={{ fontFamily: "PPNeueMontreal, sans-serif" }}
         >
-          Annual Technical Fest - 
+           Welcome to{" "} 
           <span
             className="text-cyan-400 italic"
             style={{ fontFamily: "PPEiko, serif" }}
@@ -137,12 +137,7 @@ const Hero = () => {
           className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed"
           style={{ fontFamily: "PPEiko, serif" }}
         >
-          NIT Meghalaya’s Annual Tech Fest. <br />
-          Dive into{" "}
-          <span className="text-cyan-300 font-semibold">Workshops</span>,{" "}
-          <span className="text-cyan-300 font-semibold">Competitions</span>, and{" "}
-          <span className="text-cyan-300 font-semibold">Hackathons</span> like
-          never before. Get ready to innovate, compete & create history!
+          Annual Tech Fest of NIT Meghalaya <br />
         </p>
         <button
           onClick={() => {
