@@ -24,7 +24,7 @@ const Timeline = () => {
       events: [
         "Coding Contest by the Coding Club",
         "Drone Event by the Robotics Club",
-        "Pinnacle Perspective by the Taskforce Club",
+        "Tech Challenge on Agriculture by the E-Cell",
       ],
     },
     {
@@ -83,7 +83,7 @@ const Timeline = () => {
           full brochure for detailed information.
         </p>
         <a
-          href="https://drive.google.com/file/d/1PuwowhgQ74I52FGulV0SPLlwR9ccgexJ/view"
+          href="https://drive.google.com/file/d/13VaHHg21Q2r6RdmBsVrbRjfK1yr4IYGC/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="relative inline-block mt-8 bg-green-500 px-8 py-4 rounded-lg text-lg font-semibold shadow-lg overflow-hidden group"

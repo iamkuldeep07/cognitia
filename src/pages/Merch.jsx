@@ -6,7 +6,7 @@ const merchItems = [
   {
     id: "tshirt",
     name: "Cognitia 2K26 Official T-Shirt",
-    price: "₹399",
+    price: "₹449",
     features: [
       "Premium 100% Cotton Blend",
       "Neon-grid signature back print",
@@ -15,32 +15,46 @@ const merchItems = [
     ],
     sizes: "S, M, L, XL, XXL",
     image:
-      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800",
+      "/merch/t-shirt.jpeg",
     badge: "Best Seller",
   },
   {
     id: "hoodie",
     name: "Cognitia Premium Hoodie",
-    price: "₹799",
+    price: "₹999",
     features: [
       "Heavy-blend 300GSM fleece",
       "Oversized streetwear fit",
       "Custom metal aglets",
       "Glow-in-the-dark embroidery",
     ],
-    sizes: "M, L, XL",
+    sizes: "S, M, L, XL, XXL",
     image:
-      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800",
+      "/merch/hoodie.jpeg",
     badge: "Limited Edition",
+  },
+  {
+    id: "jacket",
+    name: "Cognitia Tech-Wear Jacket",
+    price: "₹1599",
+    features: [
+      "Water-resistant outer shell",
+      "Embroidered Cognitia crest",
+      "Hidden interior tech pockets",
+      "Thermal insulated lining",
+    ],
+    sizes: "S, M, L, XL, XXL",
+    image:
+      "/merch/jacket.jpeg",
+    badge: "VIP Exclusive",
   },
 ];
 
 const Merch = () => {
-  const googleFormLink = "https://forms.gle/YOUR_FORM_LINK_HERE";
+  const googleFormLink = "https://forms.gle/gH21SsLcUXyTxDbA6";
 
   return (
-    <section className="min-h-screen bg-[#020202] text-white py-24 px-6 relative overflow-hidden flex flex-col items-center">
-
+    <section className="min-h-screen bg-[#020202] text-white py-24 px-6 relative overflow-hidden flex flex-col items-center ">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00ffff0a_1px,transparent_1px),linear-gradient(to_bottom,#00ffff0a_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
       <motion.div
@@ -76,7 +90,7 @@ const Merch = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-24">
+        <div className="flex flex-wrap justify-center gap-12 mb-24 w-full">
           {merchItems.map((item, index) => (
             <motion.div
               key={item.id}
@@ -84,16 +98,16 @@ const Merch = () => {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover="hover"
               transition={{ delay: index * 0.2 }}
-              className="relative group rounded-3xl overflow-hidden"
+              className="w-full lg:w-[calc(50%-1.5rem)] relative group rounded-3xl overflow-hidden"
             >
               <div className="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 opacity-40 group-hover:opacity-100 blur-sm"></div>
 
-              <div className="relative bg-[#050505] rounded-3xl overflow-hidden">
+              <div className="relative bg-[#050505] rounded-3xl overflow-hidden h-full">
                 <div className="absolute inset-0 bg-[repeating-linear-gradient(transparent,transparent_2px,rgba(255,255,255,0.02)_3px)] pointer-events-none"></div>
 
-                <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row h-full">
                   {/* IMAGE */}
-                  <div className="relative w-full md:w-2/5 h-72 overflow-hidden">
+                  <div className="relative w-full md:w-2/5 h-72 md:h-auto overflow-hidden">
                     <motion.img
                       src={item.image}
                       alt={item.name}
@@ -105,7 +119,7 @@ const Merch = () => {
                     />
 
                     {/* GLITCH EFFECT */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[linear-gradient(90deg,transparent,rgba(0,255,255,0.2),transparent)] animate-glitch"></div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[linear-gradient(90deg,transparent,rgba(0,255,255,0.2),transparent)] animate-glitch pointer-events-none"></div>
                   </div>
 
                   {/* DETAILS */}
@@ -151,7 +165,7 @@ const Merch = () => {
             target="_blank"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
-            className="relative inline-flex items-center gap-3 px-12 py-5 text-lg font-bold text-cyan-400 border border-cyan-400 rounded-full overflow-hidden group"
+            className="relative inline-flex items-center gap-3 px-12 py-5 text-lg font-bold text-cyan-400 border border-cyan-400 rounded-full overflow-hidden group cursor-pointer"
           >
             <span className="absolute inset-0 bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition"></span>
             <ShoppingBag size={22} />

@@ -530,7 +530,7 @@ const events = [
     slug: "telescope-making",
     category: "Astronomy Club",
     img: "/events/astro/telescope.jpg",
-    desc: "Build your own window to the universe in Telescope Making! Participants will learn the fundamentals of optics and assemble a working telescope. This hands-on event combines theory with practical skills for an enriching experience.",
+    desc: "Build your own window to the universe in Telescope Making! Participants will learn the fundamentals of optics and assemble a working telescope. This hands-on event combines theory with practical skills for an enriching experience. Forms and Rulebook will be send via mail.",
     prize: "Exciting Prizes",
     deadline: "15th September 2025",
     venue: "NIT Campus",
@@ -842,7 +842,7 @@ const events = [
     slug: "bgmi",
     category: "Gaming",
     img: "/events/gaming/bgmi.webp",
-    desc: "Gear up for an adrenaline-fueled battleground with BGMI! Compete against the best squads in an intense esports showdown where strategy, teamwork, and survival skills decide the winner. Featuring a massive ₹10,000 prize pool, this tournament is organized by Nodwin Gaming, bringing a professional esports experience to the campus. There is no direct registration or rulebook link at the moment—further details, including participation and match schedules, will be shared via email. Stay alert, drop in, and fight your way to victory!",
+    desc: "Featuring a massive ₹10,000 prize pool, this tournament is organized by Nodwin Gaming, bringing a professional esports experience to the campus. There is no direct registration or rulebook link at the moment—further details, including participation and match schedules, will be shared via email. Stay alert, drop in, and fight your way to victory!",
     prize: "10K",
     deadline: "15th September 2025",
     venue: "NIT Campus",
@@ -1584,35 +1584,30 @@ const teamData = {
       title: "Jitta Chandra Sekhar",
       subtitle: "Convenor",
       handle: "b23me013@nitm.ac.in",
-      borderColor: "#EC4899",
     }, // Pink
     {
       image: "/teams/male-no-profile.webp",
       title: "Podugu Ashrith",
       subtitle: "Convenor",
       handle: "b23ec013@nitm.ac.in",
-      borderColor: "#EC4899",
     }, 
     {
       image: "/teams/taskforce/taskforce4.jpg",
       title: "Gourav Kumar",
       subtitle: "Co-ordinator",
       handle: "b23me018@nitm.ac.in",
-      borderColor: "#EC4899",
     }, // Pink
     {
       image: "/teams/taskforce/taskforce5.jpg",
       title: "Nishu Lamba",
       subtitle: "Member",
       handle: "b24me028@nitm.ac.in",
-      borderColor: "#EC4899",
     }, // Pink
     {
       image: "/teams/taskforce/taskforce6.png",
       title: "Aditya Kumar Thakur",
       subtitle: "Member",
       handle: "b24ec035@nitm.ac.in",
-      borderColor: "#EC4899",
     }, // Pink
   ],
   "Dance & Drama": [
@@ -1621,28 +1616,27 @@ const teamData = {
       title: "Sandra Sravani",
       subtitle: "Convenor",
       handle: "b22me009@nitm.ac.in",
-      borderColor: "#EC4899",
     },
     {
       image: "/teams/dance/dance2.jpeg",
       title: "B Palguna Rao",
       subtitle: "Convenor",
       handle: "b22ee026@nitm.ac.in",
-      borderColor: "#EC4899",
+
     },
     {
       image: "/teams/dance/dance3.jpg",
       title: "T Sanjana",
       subtitle: "Coordinator",
       handle: "b23ee026@nitm.ac.in",
-      borderColor: "#EC4899",
+
     },
     {
       image: "/teams/male-no-profile.webp",
       title: "M Sreekar Prasad",
       subtitle: "Coordinator",
       handle: "b23ec023@nitm.ac.in",
-      borderColor: "#EC4899",
+ 
     },
   ],
   "Photography and fine arts": [
@@ -1904,16 +1898,16 @@ const teamData = {
       handle: "b23ce029@nitm.ac.in",
     },
     {
+      image: "/teams/departmental/departmental16.jpg",
+      title: "DEISICA MARBANIANG",
+      subtitle: "Coordinator(CE)",
+      handle: "b23ce008@nitm.ac.in",
+    },
+    {
       image: "/teams/departmental/departmental15.jpg",
       title: "Md Kashif",
       subtitle: "Member(ECE)",
       handle: "b24ec007@nitm.ac.in",
-    },
-    {
-      image: "/teams/departmental/departmental16.jpg",
-      title: "DEISICA MARBANIANG",
-      subtitle: "Member(CE)",
-      handle: "b23ce008@nitm.ac.in",
     },
   ],
   Design: [
