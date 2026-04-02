@@ -125,7 +125,7 @@ const Hero = () => {
           className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight tracking-wide"
           style={{ fontFamily: "PPNeueMontreal, sans-serif" }}
         >
-          Welcome to{" "}
+          Annual Technical Fest - 
           <span
             className="text-cyan-400 italic"
             style={{ fontFamily: "PPEiko, serif" }}
