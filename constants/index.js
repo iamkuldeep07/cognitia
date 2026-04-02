@@ -27,8 +27,8 @@ const events = [
       "https://drive.google.com/file/d/1pN0ynway3Z3e7fRLHoA6CVTN8BPnxxoQ/view?usp=drive_link",
   },
   {
-    title: "Coding Contest",
-    slug: "coding-contest",
+    title: "Coding Conquest",
+    slug: "coding-conquest",
     category: "Coding",
     img: "/events/coding/codeconquest.png",
     desc: "Step into the battlefield of logic and algorithms with Code Conquest, the ultimate coding challenge designed to test your problem-solving skills, speed, and precision. Whether you’re a beginner or a seasoned programmer, this event pushes you to think critically and code efficiently under pressure.",
