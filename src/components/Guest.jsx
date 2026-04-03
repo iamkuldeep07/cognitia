@@ -22,7 +22,7 @@ const guests = [
   {
     id: 3,
     name: "Prof. Sridhar Pabbisetty",
-    currentPost: "Senior Director, MIT School of Government Public policy and Urban Governance specialist",
+    currentPost: "Board Member, BrandVelocity AI"
     eventRole: "Keynote Speaker",
     image: "/sridhar.jpeg",
     color: "from-green-400 to-emerald-500"
