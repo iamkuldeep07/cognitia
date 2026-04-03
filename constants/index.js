@@ -1100,7 +1100,7 @@ const teamData = {
       handle: "b22cs012@nitm.ac.in",
     }, 
     {
-      image: "/teams/robotics/robotics2.jpg",
+      image: "/teams/robotics/robotics2a.jpg",
       title: "Pankaj Saraswat",
       subtitle: "Convenor",
       handle: "b22ec040@nitm.ac.in",
