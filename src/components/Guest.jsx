@@ -22,7 +22,7 @@ const guests = [
   {
     id: 3,
     name: "Prof. Sridhar Pabbisetty",
-    currentPost: "Board Member, BrandVelocity AI"
+    currentPost: "Board Member,BrandVelocity AI"
     eventRole: "Keynote Speaker",
     image: "/sridhar.jpeg",
     color: "from-green-400 to-emerald-500"
