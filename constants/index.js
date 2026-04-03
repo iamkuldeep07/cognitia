@@ -784,7 +784,7 @@ const events = [
       "Diya Silvana Ritchil - b22ee001@nitm.ac.in"
     ],
     registerLink: "https://forms.gle/wS75Q4dikJzSGgxU9",
-    rulebookLink: "https://drive.google.com/file/d/1518yPGGrIQkpUIja63khh4-US3YzKMW0/view?usp=drive_link",
+    rulebookLink: "#",
   },
   {
     title: "Solar PV System Design",
