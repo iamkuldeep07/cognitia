@@ -30,7 +30,7 @@ const guests = [
   {
     id: 4,
     name: "Prof. Praveen C Ramamurthy",
-    currentPost: "Professor, Department of Materials Engineering, IISc Bangalore",
+    currentPost: "Professor, Department of Materials Engineering & Chair, Interdisciplinary Centre for Water Research, IISC Bangalore",
     eventRole: "Keynote Speaker",
     image: "/praveen.webp",
     color: "from-orange-400 to-red-500"
