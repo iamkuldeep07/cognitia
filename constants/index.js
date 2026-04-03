@@ -683,7 +683,7 @@ const events = [
       "Nazia Hasan Sheikh  - b23me026@nitm.ac.in",
       "Deisica Marbaniang - b23me025@nitm.ac.in"
     ],
-    registerLink: "https://forms.gle/WuRtUBd7LcpUVSN78",
+    registerLink: "https://forms.gle/ydzxF6tYdStkYaKX6",
     rulebookLink: "https://drive.google.com/file/d/1O8nOMDmW4jtBZoOseX9_swRLHxiHeUAa/view?usp=drive_link",
   },
   {
