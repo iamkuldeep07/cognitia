@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaGoogle, FaInstagram } from "react-icons/fa";
+import { FaGoogle, FaInstagram, FaEye } from "react-icons/fa"; // Added FaEye
 import { Link } from "react-router-dom"; 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
   const footerRef = useRef(null);
   const cognitiaRef = useRef(null);
+  
+  const [visitorCount, setVisitorCount] = useState(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -43,12 +45,41 @@ const Footer = () => {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    const fetchVisitorCount = async () => {
+      try {
+        const namespace = "cognitia2k26_nitm";
+        const key = "total_visits";
+        
+        const hasVisited = localStorage.getItem("cognitia_has_visited");
+        
+        let url = `https://api.counterapi.dev/v1/${namespace}/${key}`;
+        
+        if (!hasVisited) {
+          url += "/up";
+          localStorage.setItem("cognitia_has_visited", "true");
+        }
+
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        setVisitorCount(data.count);
+      } catch (error) {
+        console.error("Error fetching visitor count:", error);
+        setVisitorCount("..."); // Fallback if API fails
+      }
+    };
+
+    fetchVisitorCount();
+  }, []);
+
   return (
     <footer
       ref={footerRef}
       className="relative w-full bg-black text-white border-t border-gray-800 overflow-hidden"
     >
       <div className="container mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+        {/* Navigation Links */}
         <div className="footer-links text-center lg:text-left">
           <ul className="space-y-3 text-lg">
             <li>
@@ -74,6 +105,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* Center Logo/Title */}
         <div className="text-center">
           <h1
             ref={cognitiaRef}
@@ -86,6 +118,7 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Socials & Address */}
         <div className="footer-social text-center lg:text-right">
           <div className="flex justify-center lg:justify-end gap-6 mb-6">
             <a
@@ -104,7 +137,6 @@ const Footer = () => {
             >
               <FaInstagram size={22} />
             </a>
-
           </div>
           <div className="footer-address text-gray-400 text-sm leading-relaxed">
             <p>Saitsohpen Sohra, East Khasi Hills</p>
@@ -114,8 +146,17 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-gray-800 py-5 text-center text-sm text-gray-500">
-        © 2026 COGNITIA. All rights reserved. | Built by Cognitia
+      {/* Bottom Bar: Copyright & Visitor Count */}
+      <div className="border-t border-gray-800 py-6 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <p>© 2026 COGNITIA. All rights reserved. | Built by Cognitia</p>
+        
+        {/* New Visitor Counter Display */}
+        <div className="mt-4 md:mt-0 flex items-center gap-2 bg-gray-900/50 px-4 py-2 rounded-full border border-gray-800">
+          <FaEye className="text-green-400" size={16} />
+          <span className="font-medium text-gray-300">
+            Total Visitors: <span className="text-green-400 font-bold ml-1">{visitorCount !== null ? visitorCount : "..."}</span>
+          </span>
+        </div>
       </div>
     </footer>
   );
