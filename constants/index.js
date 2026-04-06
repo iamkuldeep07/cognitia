@@ -721,7 +721,7 @@ const events = [
     rulebookLink: "",
   },
   {
-    title: "Maths",
+    title: "Numerix Battle (Maths)",
     slug: "maths",
     category: "Dept",
     img: "/events/dept/maths.avif",
@@ -734,7 +734,7 @@ const events = [
       "Saismruti Sabat - s25ma009@nitm.ac.in"
     ],
     registerLink: "https://forms.gle/abZ3f8uCGCemNha49",
-    rulebookLink: "",
+    rulebookLink: "https://drive.google.com/file/d/1GzCdHddtHaSvZJrSeQKHTply0S9hdPBL/view?usp=drive_link",
   },
   {
     title: "Chemistry",
