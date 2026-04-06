@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const events = [
   {
     title: "Robo Rumble",
+    slug: "robo-rumble", 
     description: "Battle it out with your custom-built robots in an electrifying arena combat competition.",
     image: "/roborumble.png",
     tag: "ROBOTICS",
@@ -12,6 +13,7 @@ const events = [
   },
   {
     title: "Hackathon",
+    slug: "hackathon", 
     description: "48 hours of innovation, coding, and problem-solving with industry-grade prizes.",
     image: "/hackathon.jpg",
     tag: "CODING",
@@ -19,6 +21,7 @@ const events = [
   },
   {
     title: "Drone Racing",
+    slug: "drone-racing",
     description: "Show off your piloting skills in this high-speed FPV drone racing spectacle.",
     image: "/drone.jpg",
     tag: "AERIAL",
@@ -26,6 +29,7 @@ const events = [
   },
   {
     title: "Tech Talks",
+    slug: "tech-talks",
     description: "Industry leaders share raw insights from the frontier of technology.",
     image: "/techtalk.jpg",
     tag: "KEYNOTE",
@@ -33,13 +37,15 @@ const events = [
   },
   {
     title: "Maze Runner",
-    description: "Watch cutting-edge autonomous robots navigate through complex labyrinths.",
-    image: "/mazerunner.jpg",
+    slug: "goal-against-time", 
+    description: "Precision meets speed in Goal Against Time! Participants must design robots capable of completing specific tasks within a limited time frame. Efficiency, accuracy, and quick thinking are the keys to winning.",
+    image: "/events/robotics/goalagainsttime.jpg",
     tag: "AUTONOMOUS",
     accent: "#facc15",
   },
   {
     title: "Code Conquest",
+    slug: "code-conquest", 
     description: "An epic multi-round algorithmic odyssey testing your competitive programming limits.",
     image: "/codeconquest.png",
     tag: "COMPETITIVE",
@@ -49,6 +55,12 @@ const events = [
 
 const EventCard = ({ event, index }) => {
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate(); 
+
+  const handleCardClick = () => {
+    navigate(`/events/${event.slug}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <motion.div
@@ -58,6 +70,7 @@ const EventCard = ({ event, index }) => {
       transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={handleCardClick} 
       style={{
         transform: hovered ? "translateY(-10px)" : "translateY(0px)",
         transition: "transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)",
