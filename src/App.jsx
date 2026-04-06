@@ -15,7 +15,7 @@ import Guest from "./components/Guest";
 const App = () => {
   return (
     <Router>
-      {/* <CanvasCursor /> */}
+      <CanvasCursor /> 
       <ScrollToTop />
       <Navbar />
       <div>
