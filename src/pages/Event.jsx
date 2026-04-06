@@ -205,24 +205,26 @@ const Event = () => {
         >
           Browse All Events
         </motion.h2>
-
-        <div className="flex md:justify-center gap-6 md:gap-8 mb-12 overflow-x-auto no-scrollbar pb-2 px-2 w-full snap-x">
-          {Object.keys(eventsData).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => {
-                setActiveTab(tab);
-                navigate(`/events?tab=${tab}#all-events`, { replace: true });
-              }}
-              className={`pb-2 text-base md:text-lg font-semibold whitespace-nowrap snap-start transition-colors ${
-                activeTab === tab
-                  ? "border-b-2 border-green-400 text-green-400"
-                  : "text-gray-400 hover:text-green-300"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
+        
+        <div className="max-w-6xl mx-auto w-full mb-12 px-2 md:px-0">
+          <div className="flex justify-start gap-6 md:gap-8 overflow-x-auto no-scrollbar pb-2 w-full snap-x">
+            {Object.keys(eventsData).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => {
+                  setActiveTab(tab);
+                  navigate(`/events?tab=${tab}#all-events`, { replace: true });
+                }}
+                className={`pb-2 text-base md:text-lg font-semibold whitespace-nowrap snap-start transition-colors ${
+                  activeTab === tab
+                    ? "border-b-2 border-green-400 text-green-400"
+                    : "text-gray-400 hover:text-green-300"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div
