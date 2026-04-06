@@ -36,7 +36,7 @@ const events = [
     accent: "#a855f7",
   },
   {
-    title: "Maze Runner",
+    title: "Goal Against Time",
     slug: "goal-against-time", 
     description: "Precision meets speed in Goal Against Time! Participants must design robots capable of completing specific tasks within a limited time frame. Efficiency, accuracy, and quick thinking are the keys to winning.",
     image: "/events/robotics/goalagainsttime.jpg",
