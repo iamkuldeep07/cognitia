@@ -45,28 +45,33 @@ const Footer = () => {
     return () => ctx.revert();
   }, []);
 
+  // Visitor Counter Logic
   useEffect(() => {
     const fetchVisitorCount = async () => {
       try {
         const namespace = "cognitia2k26_nitm";
         const key = "total_visits";
-        
         const hasVisited = localStorage.getItem("cognitia_has_visited");
         
-        let url = `https://api.counterapi.dev/v1/${namespace}/${key}`;
+        let url = `https://abacus.jsn.cam/get/${namespace}/${key}`;
         
         if (!hasVisited) {
-          url += "/up";
+          url = `https://abacus.jsn.cam/hit/${namespace}/${key}`;
           localStorage.setItem("cognitia_has_visited", "true");
         }
 
         const response = await fetch(url);
-        const data = await response.json();
         
-        setVisitorCount(data.count);
+        if (response.ok) {
+          const data = await response.json();
+          // Note: Abacus uses .value instead of .count
+          setVisitorCount(data.value); 
+        } else {
+          setVisitorCount("...");
+        }
       } catch (error) {
         console.error("Error fetching visitor count:", error);
-        setVisitorCount("..."); // Fallback if API fails
+        setVisitorCount("..."); // Fallback if completely blocked
       }
     };
 
