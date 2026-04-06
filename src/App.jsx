@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"; // <-- Import hooks
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CanvasCursor from "./components/CanvasCursor";
 import Hero from "./pages/Hero";
@@ -13,9 +14,22 @@ import EventDetails from "./pages/EventDetails";
 import Guest from "./components/Guest";
 
 const App = () => {
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Router>
-      <CanvasCursor /> 
+      {/* Conditionally render CanvasCursor only if it's a desktop */}
+      {isDesktop && <CanvasCursor />} 
+      
       <ScrollToTop />
       <Navbar />
       <div>
