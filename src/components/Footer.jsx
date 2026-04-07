@@ -119,7 +119,7 @@ const Footer = () => {
             COGNITIA
           </h1>
           <p className="mt-4 text-gray-400 text-sm">
-            The official Tech & Cultural Fest of NIT Meghalaya.
+            The official Tech Fest of NIT Meghalaya.
           </p>
         </div>
 
@@ -153,7 +153,17 @@ const Footer = () => {
 
       {/* Bottom Bar: Copyright & Visitor Count */}
       <div className="border-t border-gray-800 py-6 px-6 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-        <p>© 2026 COGNITIA. All rights reserved. | Built by Cognitia</p>
+        <p>
+  © 2026 COGNITIA. All rights reserved. | Built by{" "}
+  <a
+    href="https://www.linkedin.com/in/kuldeep-chaudhary-55a830278/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-green-400 hover:text-green-300 hover:underline transition-colors font-semibold"
+  >
+    Kuldeep Chaudhary
+  </a>
+</p>
         
         {/* New Visitor Counter Display */}
         <div className="mt-4 md:mt-0 flex items-center gap-2 bg-gray-900/50 px-4 py-2 rounded-full border border-gray-800">
