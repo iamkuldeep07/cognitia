@@ -526,7 +526,7 @@ const events = [
   },
 
   {
-    title: "Telescope Making",
+    title: "Telescope Making Workshop",
     slug: "telescope-making",
     category: "Astronomy Club",
     img: "/events/astro/telescope.jpg",
@@ -705,22 +705,6 @@ const events = [
     rulebookLink: "https://drive.google.com/file/d/1SnLEEbShMHOa86ySheZ_6GGffNeys1FB/view?usp=drive_link",
   },
   {
-    title: "Physics",
-    slug: "physics",
-    category: "Dept",
-    img: "/events/dept/physics.jpeg",
-    desc: "Explore the fascinating world of physics through conceptual challenges and problem-solving rounds. From mechanics to modern physics, this event is designed to test your understanding of fundamental principles.",
-    prize: "Exciting Prizes",
-    deadline: "15th September 2025",
-    venue: "NIT Campus",
-    schedule: "9th April 2026 – 11th April 2026",
-    contacts: [
-      
-    ],
-    registerLink: "https://forms.gle/JnHQQCv1beh6romJ6",
-    rulebookLink: "",
-  },
-  {
     title: "Numerix Battle (Maths)",
     slug: "maths",
     category: "Dept",
@@ -735,22 +719,6 @@ const events = [
     ],
     registerLink: "https://forms.gle/abZ3f8uCGCemNha49",
     rulebookLink: "https://drive.google.com/file/d/1GzCdHddtHaSvZJrSeQKHTply0S9hdPBL/view?usp=drive_link",
-  },
-  {
-    title: "Chemistry",
-    slug: "chemistry",
-    category: "Dept",
-    img: "/events/dept/chemistry.jpeg",
-    desc: "Dive into the world of reactions, compounds, and concepts in this chemistry-based competition. Test your theoretical knowledge and practical understanding through engaging and thought-provoking challenges.",
-    prize: "Exciting Prizes",
-    deadline: "15th September 2025",
-    venue: "NIT Campus",
-    schedule: "9th April 2026 – 11th April 2026",
-    contacts: [
-      
-    ],
-    registerLink: "https://forms.gle/9Ey5KUaCXJV4w3zm8",
-    rulebookLink: "#",
   },
   {
     title: "Box Cricket",
@@ -851,7 +819,7 @@ const events = [
       "Ankit Raj - b22ee005@nitm.ac.in",
       "Rohit Aryan - b22ee017@nitm.ac.in"
     ],
-    registerLink: "#",
+    registerLink: "https://forms.gle/GMaVxhtAjHd8Et7a6",
     rulebookLink: "#",
   },
   {
@@ -2095,6 +2063,13 @@ const teamData = {
       title: "Ankit Raj",
       subtitle: "Head",
       handle: "b22ee005@nitm.ac.in",
+      borderColor: "#EC4899",
+    },
+    {
+      image: "/teams/gaming/gaming1.jpeg",
+      title: "Tinku Debbarma",
+      subtitle: "Head",
+      handle: "b22ee020@nitm.ac.in",
       borderColor: "#EC4899",
     },
     {
