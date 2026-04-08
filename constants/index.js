@@ -1048,7 +1048,7 @@ const teamData = {
       handle: "b23ec018@nitm.ac.in",
     },
     {
-      image: "/teams/publicity/publicity5.jpg",
+      image: "/teams/publicity/publicity5.jpeg",
       title: "Midasala Bhanu Vardhan Rao",
       subtitle: "Member",
       handle: "b24me022@nitm.ac.in",
@@ -1548,7 +1548,7 @@ const teamData = {
       borderColor: "#EC4899",
     },
     {
-      image: "/teams/male-no-profile.webp",
+      image: "/teams/taskforce/taskforce1.jpeg",
       title: "Jitta Chandra Sekhar",
       subtitle: "Convenor",
       handle: "b23me013@nitm.ac.in",
@@ -1943,7 +1943,7 @@ const teamData = {
       borderColor: "#EC4899",
     },
     {
-      image: "/teams/designteam/designteam10.jpg",
+      image: "/teams/designteam/designteam10.jpeg",
       title: "Midasala Bhanu Vardhan Rao",
       subtitle: "Member",
       handle: "b24me022@nitm.ac.in",
