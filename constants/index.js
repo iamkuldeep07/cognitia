@@ -3,7 +3,7 @@ const navLinks = [
   { id: "home", title: "Home" },
   { id: "events", title: "Events" },
   { id: "team", title: "Team" },
-  { id: "buy-merch", title: "Buy Merch" },
+  // { id: "buy-merch", title: "Buy Merch" },
 ];
 
 const events = [
