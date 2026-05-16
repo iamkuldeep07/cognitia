@@ -7,7 +7,7 @@ import Team from "./pages/Team";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Timeline from "./pages/Timeline";
-import Merch from "./pages/Merch";
+// import Merch from "./pages/Merch";
 import PopularEvent from "./pages/PopularEvents";
 import ScrollToTop from "./components/ScrollToTop";
 import EventDetails from "./pages/EventDetails";
@@ -49,7 +49,7 @@ const App = () => {
           />
 
           {/* Event listing page */}
-          <Route path="/buy-merch" element={<Merch />} />
+          {/* <Route path="/buy-merch" element={<Merch />} /> */}
           {/* Team page */}
           <Route path="/team" element={<Team />} />
 
